@@ -7,6 +7,10 @@ h2 {
     font-family: sans-serif;
 }
 
+h3 {
+    color: rgba(0,0,139,0.8);
+}
+
 p {
     font-family: serif;
 }
@@ -21,6 +25,10 @@ del {
 
 pre {
     font-family: monospace;
+}
+
+.transparent-text {
+    color:rgba(0,0,0,0.5);
 }
 
 mark {
