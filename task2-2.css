@@ -1,0 +1,29 @@
+h1 {
+    font-family: sans-serif;
+}
+
+h2 {
+    text-align: left;
+    font-family: sans-serif;
+}
+
+p {
+    font-family: serif;
+}
+
+a[href] {
+    color: darkgreen;
+}
+
+del {
+    color: grey;
+}
+
+pre {
+    font-family: monospace;
+}
+
+mark {
+    color: darkblue;
+    background-color: pink;
+}
