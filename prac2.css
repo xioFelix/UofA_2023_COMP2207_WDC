@@ -40,3 +40,15 @@ mark {
     color: darkblue;
     background-color: pink;
 }
+
+#content {
+    background-color: white;
+}
+
+span.blue {
+    color: blue;
+}
+
+span.fancy {
+    font-family: cursive;
+}
