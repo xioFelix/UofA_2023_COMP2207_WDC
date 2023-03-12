@@ -81,5 +81,6 @@ span.red-outline {
 
 #blueborder-r8 {
     border: 1px solid blue;
-    border-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
