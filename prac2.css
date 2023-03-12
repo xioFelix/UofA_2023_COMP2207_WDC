@@ -86,3 +86,35 @@ span.red-outline {
     border: 1px solid blue;
     border-radius: 0px 0px 8px 8px;
 }
+
+#yellow1 {
+    background-color: yellow;
+    margin: 10px 20px;
+    text-align: right;
+    padding: 12px;
+    border-style: solid;
+    width:700px;
+    height: 200px;
+    outline: 1px solid red;
+}
+
+#blue1 {
+    background-color: blue;
+    outline: 1px solid red;
+
+}
+
+#yellow2 {
+    background-color: yellow;
+    text-align: right;
+    outline: 1px solid red;
+    padding: 12px;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+}
+
+#blue2 {
+    background-color: blue;
+    outline: 1px solid red;
+}
