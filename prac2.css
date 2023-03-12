@@ -60,7 +60,7 @@ span.redborder {
 }
 
 span.red-outline {
-
+    border: 1px solid red;
     outline-color: red;
 }
 
