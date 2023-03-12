@@ -64,11 +64,21 @@ span.red-outline {
     outline: 1px solid red;
 }
 
+#redborder {
+    border: 1px solid red;
+}
+
+#blueborder{
+    border:1px solid blue;
+}
+
 #redborder-r8 {
+    border: 1px solid red;
     border-radius: 8;
     border-bottom: hidden;
 }
 
 #blueborder-r8 {
+    border: 1px solid blue;
     border-radius: 8;
 }
