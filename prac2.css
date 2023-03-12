@@ -27,7 +27,7 @@ h4 {
 }
 
 p {
-    font-family: 'Noto Serif', italic;
+    font-family: 'Noto Serif', serif;
 
 }
 
@@ -136,6 +136,6 @@ span.red-outline {
     font-family: 'Raleway', serif;
 }
 
-#BFCFD4 {
+#BFCFD4 * {
     color: #BFCFD4;
 }
