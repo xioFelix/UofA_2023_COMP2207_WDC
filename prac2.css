@@ -60,8 +60,8 @@ span.redborder {
 }
 
 span.red-outline {
-    border: 1px solid red;
-    outline-color: red;
+
+    outline: 1px solid red;
 }
 
 #redborder-r8 {
