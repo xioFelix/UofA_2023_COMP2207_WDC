@@ -44,7 +44,7 @@ mark {
 #content {
     background-color: white;
     border-color: darkgray;
-    border-radius: 8;
+    border-radius: 8px;
 }
 
 span.blue {
