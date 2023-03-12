@@ -74,7 +74,8 @@ span.red-outline {
 
 #redborder-r8 {
     border: 1px solid red;
-    border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     border-bottom: hidden;
 }
 
