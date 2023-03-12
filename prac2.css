@@ -43,6 +43,8 @@ mark {
 
 #content {
     background-color: white;
+    border-color: darkgray;
+    border-radius: 8;
 }
 
 span.blue {
@@ -51,4 +53,8 @@ span.blue {
 
 span.fancy {
     font-family: cursive;
+}
+
+span.redborder {
+    border-color: red;
 }
