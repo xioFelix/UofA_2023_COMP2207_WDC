@@ -7,20 +7,28 @@ hr {
     border-top: 1px solid #CFDFE4;
 }
 h1 {
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 h2 {
     text-align: left;
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 h3 {
     color: rgba(0,0,139,0.8);
 }
 
+h4 {
+    font-family: 'Raleway', sans-serif;
+    text-decoration: underline;
+    font-weight: normal;
+    font-style: italic;
+}
+
 p {
-    font-family: serif;
+    font-family: 'Noto Serif', italic;
+
 }
 
 a[href] {
@@ -118,4 +126,16 @@ span.red-outline {
     background-color: blue;
     outline: 1px solid red;
     margin-top: 20px;
+}
+
+#multi-line {
+    color: dimgray;
+    line-height: 1.5;
+    word-spacing: 0.2em;
+    text-align: justify;
+    font-family: 'Raleway', serif;
+}
+
+#BFCFD4 {
+    color: #BFCFD4;
 }
