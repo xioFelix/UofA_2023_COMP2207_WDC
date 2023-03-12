@@ -56,7 +56,7 @@ span.fancy {
 }
 
 span.redborder {
-    border-color: red;
+    border: 1px solid red;
 }
 
 span.red-outline {
