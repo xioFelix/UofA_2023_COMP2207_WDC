@@ -118,7 +118,4 @@ span.red-outline {
     background-color: blue;
     outline: 1px solid red;
     margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
