@@ -74,13 +74,12 @@ span.red-outline {
 
 #redborder-r8 {
     border: 1px solid red;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 8px 8px 0px 0px;
+
     border-bottom: hidden;
 }
 
 #blueborder-r8 {
     border: 1px solid blue;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-radius: 0px 0px 8px 8px;
 }
