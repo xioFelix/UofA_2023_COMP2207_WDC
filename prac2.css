@@ -129,6 +129,7 @@ span.red-outline {
 }
 
 #multi-line {
+    quotes: " " " ";
     color: dimgray;
     line-height: 1.5;
     word-spacing: 0.2em;
