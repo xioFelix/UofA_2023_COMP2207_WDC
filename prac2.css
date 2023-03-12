@@ -92,15 +92,15 @@ span.red-outline {
     margin: 10px 20px;
     text-align: right;
     padding: 12px;
-    border-style: solid;
-    width: 700px;
-    height: 200px;
+    width: 636px;
+    height: 136px;
     outline: 1px solid red;
 }
 
 #blue1 {
     background-color: blue;
     outline: 1px solid red;
+    border: solid;
 
 }
 
@@ -109,10 +109,9 @@ span.red-outline {
     text-align: right;
     outline: 1px solid red;
     padding: 12px;
-    width: 400px;
-    height: 400px;
+    width: 376px;
+    height: 376px;
     margin: auto;
-    border: 1px;
 }
 
 #blue2 {
