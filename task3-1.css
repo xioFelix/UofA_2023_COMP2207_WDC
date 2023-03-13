@@ -39,7 +39,7 @@ div p span span.color {
 }
 
 p span span.normal {
-    color: red;
+    color: green;
 }
 
 div + p span span.color {
