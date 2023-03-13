@@ -147,7 +147,7 @@ ol.roman {
     list-style-type: lower-roman;
 }
 
-#bar {
+ul.bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -155,7 +155,7 @@ ol.roman {
     overflow: hidden;
 }
 
-li a {
+.bar li a {
     color: white;
     display: inline;
     float: left;
