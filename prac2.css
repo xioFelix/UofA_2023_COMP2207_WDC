@@ -55,8 +55,9 @@ mark {
 
 #content {
     background-color: white;
-    border-color: darkgray;
+    border: solid darkgrey;
     border-radius: 8px;
+    padding: 1em;
 }
 
 span.blue {
@@ -141,4 +142,5 @@ span.red-outline {
 #BFCFD4 {
     color: #BFCFD4;
     text-align: center;
+    margin: auto;
 }
