@@ -131,16 +131,14 @@ span.red-outline {
 }
 
 #multi-line {
-    quotes: " " " ";
+    font-family: 'Raleway', sans-serif;
     color: dimgrey;
     line-height: 1.5;
     word-spacing: 0.2em;
     text-align: justify;
-    font-family: 'Raleway', serif;
 }
 
 #BFCFD4 {
     color: #BFCFD4;
     text-align: center;
-    margin: auto;
 }
