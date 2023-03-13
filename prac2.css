@@ -168,3 +168,48 @@ li a:hover {
     color: darkgrey;
     background-color: white;
 }
+
+table.fancy {
+
+    width: 500px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table.fancy th {
+    border: none;
+    border-bottom: 1px solid #cccccc;
+}
+
+
+table.fancy tr:nth-child(even) {
+    background-color: #F8F8F8;
+}
+
+table.fancy tr:nth-child(odd) {
+    background-color: white;
+}
+
+table.fancy tr:first-child {
+    color: white;
+    background-color: darkslategrey;
+}
+
+table.complex {
+    width: 500px;
+    text-align: left;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table.complex tr th {
+    border: 1px solid black;
+}
+table.complex thead tr {
+    background-color: palegoldenrod;
+    border: 1px solid black;
+}
+
+table.complex th:nth-child(1) {
+    background-color: palegoldenrod;
+  }
