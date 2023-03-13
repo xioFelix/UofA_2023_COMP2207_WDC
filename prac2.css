@@ -138,3 +138,33 @@ span.red-outline {
     color: #BFCFD4;
     text-align: center;
 }
+
+ul.square {
+    list-style-type: square;
+}
+
+ol.roman {
+    list-style-type: lower-roman;
+}
+
+#bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: darkgrey;
+    overflow: hidden;
+}
+
+li a {
+    color: white;
+    display: inline;
+    float: left;
+    display: block;
+    padding: 10px;
+
+}
+
+li a:hover {
+    color: darkgrey;
+    background-color: white;
+}
