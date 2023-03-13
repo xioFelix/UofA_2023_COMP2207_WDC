@@ -1,6 +1,7 @@
 body {
     background-color: #DCF5F5;
     background-image: url("./cross.png");
+    font-family: 'Noto Serif', serif;
 }
 
 hr {
@@ -25,11 +26,6 @@ h4 {
     text-decoration: underline;
     font-weight: normal;
     font-style: italic;
-}
-
-p {
-    font-family: 'Noto Serif', serif;
-
 }
 
 a[href] {
@@ -142,10 +138,3 @@ span.red-outline {
     color: #BFCFD4;
     text-align: center;
 }
-/* .fa-brands {
-    color: #BFCFD4;
-}
-
-.fa-solid {
-    color: #BFCFD4;
-} */
