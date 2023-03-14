@@ -56,6 +56,13 @@ mark {
     padding: 1em;
 }
 
+div.content {
+    background-color: white;
+    border: solid darkgrey;
+    border-radius: 8px;
+    padding: 1em;
+}
+
 span.blue {
     color: blue;
 }
