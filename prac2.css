@@ -64,6 +64,7 @@ div.floatleft {
     float: left;
     overflow: scroll;
     margin: auto;
+    height: 100px;
 }
 
 div.rightbox {
@@ -72,8 +73,8 @@ div.rightbox {
     border: solid darkgrey;
     border-radius: 8px;
     padding: 1em;
-    width: 600px;
     height: 100px;
+    margin: auto;
 }
 
 div.redbox {
