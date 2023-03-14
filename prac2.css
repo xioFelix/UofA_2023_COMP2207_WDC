@@ -81,6 +81,7 @@ div.redbox {
     height: 100px;
     outline: 1px solid red;
     overflow: hidden;
+    margin: 100px 0px 0px 100px;
 }
 
 span.blue {
