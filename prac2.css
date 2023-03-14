@@ -67,11 +67,11 @@ div.floatleft {
 }
 
 div.rightbox {
+    margin-left: 10px;
     background-color: white;
     border: solid darkgrey;
     border-radius: 8px;
     padding: 1em;
-    margin: 0px 10px auto;
     width: 600px;
     height: 100px;
 }
