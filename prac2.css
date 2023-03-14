@@ -79,7 +79,8 @@ div.rightbox {
 div.redbox {
     width: 1000px;
     height: 100px;
-    margin: 1px solid red;
+    outline: 1px solid red;
+    overflow: hidden;
 }
 
 span.blue {
