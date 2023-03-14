@@ -63,7 +63,7 @@ div.floatleft {
     padding: 1em;
     float: left;
     overflow: scroll;
-    margin:auto;
+    margin: auto;
 }
 
 div.rightbox {
@@ -71,7 +71,7 @@ div.rightbox {
     border: solid darkgrey;
     border-radius: 8px;
     padding: 1em;
-    margin:0px 10px auto;
+    margin: 0px 10px auto;
     width: 600px;
     height: 100px;
 }
@@ -82,7 +82,8 @@ div.redbox {
     outline: 1px solid red;
     overflow: hidden;
     margin: 100px 0px 0px 100px;
-    position: center;
+    margin: auto;
+    float:none;
 }
 
 span.blue {
