@@ -56,11 +56,12 @@ mark {
     padding: 1em;
 }
 
-div.content {
+div.floatleft {
     background-color: white;
     border: solid darkgrey;
     border-radius: 8px;
     padding: 1em;
+    float: left;
 }
 
 span.blue {
