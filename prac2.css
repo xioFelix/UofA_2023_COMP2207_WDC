@@ -62,7 +62,11 @@ div.floatleft {
     border-radius: 8px;
     padding: 1em;
     float: left;
+    overflow: scroll;
+    margin:auto;
 }
+
+div.
 
 span.blue {
     color: blue;
@@ -213,6 +217,7 @@ table.complex {
 table.complex tr th {
     border: 1px solid black;
 }
+
 table.complex thead tr {
     background-color: palegoldenrod;
     border: 1px solid black;
@@ -220,4 +225,4 @@ table.complex thead tr {
 
 table.complex th:nth-child(1) {
     background-color: palegoldenrod;
-  }
+}
