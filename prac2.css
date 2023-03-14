@@ -57,6 +57,8 @@ mark {
 }
 
 div.floatleft {
+    position: relative;
+    top: 10px;
     background-color: white;
     border: solid darkgrey;
     border-radius: 8px;
@@ -71,6 +73,7 @@ div.floatleft {
 div.rightbox {
     position: relative;
     left: 10px;
+    top: 10px;
     background-color: white;
     border: solid darkgrey;
     border-radius: 8px;
