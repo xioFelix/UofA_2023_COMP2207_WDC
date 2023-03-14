@@ -64,7 +64,7 @@ div.floatleft {
     float: left;
     overflow: scroll;
     margin: auto;
-    height: 100px;
+    height: 400px;
 }
 
 div.rightbox {
@@ -73,7 +73,7 @@ div.rightbox {
     border: solid darkgrey;
     border-radius: 8px;
     padding: 1em;
-    height: 100px;
+    height: 400px;
     margin: auto;
 }
 
