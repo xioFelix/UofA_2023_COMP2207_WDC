@@ -71,7 +71,7 @@ div.rightbox {
     border: solid darkgrey;
     border-radius: 8px;
     padding: 1em;
-    margin:auto;
+    margin:0px 10px auto;
     width: 600px;
     height: 100px;
 }
