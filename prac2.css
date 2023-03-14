@@ -71,9 +71,10 @@ div.redbox {
     border: solid darkgrey;
     border-radius: 8px;
     padding: 1em;
+    margin:auto;
     width: 600px;
     height: 100px;
-    margin:auto;
+ 
 }
 
 span.blue {
