@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>This page definitely has a title</title>
-    </head>
-    <body>
-        <h1>This page shows the time</h1>
-        <hr>
-        <p class="time_box">The time is:</p>
-        <p id="current_time" class="time_box">THIS TEXT HERE</p>
-        <button type="button">
-            Click here for the Date
-        </button>
-    </body>
+
+<head>
+    <title>This page definitely has a title</title>
+</head>
+
+<body>
+    <h1>This page shows the time</h1>
+    <hr>
+    <p class="time_box">The time is:</p>
+    <p id="current_time" class="time_box">THIS TEXT HERE</p>
+    <button type="button" id="demo">
+        Click here for the Date
+    </button>
+    <script>
+        const d = new Date();
+        document.getElementById("demo").innerHTML = d + " " + "ACST";
+    </script>
+
+</body>
+
 </html>
