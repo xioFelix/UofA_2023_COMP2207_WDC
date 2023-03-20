@@ -7,7 +7,7 @@
     <body>
         <ul id="list"></ul>
         <p id="text"><strong>NOT</strong> working</p>
-        
+
         <script>
             var users = ['Bob Lastname',
                          'Alice Person',
@@ -22,11 +22,11 @@
                          'Deon Surname',
                          'Loreen Person'];
             var list = document.getElementById("list");
-            for(var i=0; i<=users.length; i++){
+            for(var i=0; i<users.length; i++){
                 var li = document.createElement("LI"); //Create new <li>
                 var space = users[i].indexOf(" "); // Get location of space between firstname and surname
                 li.innerHTML = users[i].substring(0, space); // Extract firstname from users and populate <li>
-                list.appendChild(li); // append li to ul 
+                list.appendChild(li); // append li to ul
             }
             var p = document.getElementById("text");
             p.innerHTML = "It <strong>IS</strong> working";

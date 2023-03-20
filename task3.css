@@ -44,3 +44,7 @@ hr {
     clear: both;
 }
 
+.date {
+    font-style: bold;
+    color: grey;
+}
