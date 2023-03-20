@@ -18,8 +18,8 @@ var posts = document.getElementById("posts");
     let date_p = document.createElement('P');
     let content_p = document.createElement('P');
 
-    date_p.classList.add("date");
-    content_p.classList.add("content");
+    date_p.classList.add("post-time");
+    content_p.classList.add("post-content");
 
 
     date_p.innerText = date;
