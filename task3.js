@@ -14,10 +14,6 @@ var blue = document.getElementById("blue");
 var red = document.getElementById("red");
 var number = document.getElementById("number");
 
-// 3.6
-var setBold = document.getElementById("Bold");
-var setItalic = document.getElementById("Italic");
-
 function Post() {
     const date = new Date();
     // let date = d.toLocaleString();
@@ -45,6 +41,8 @@ function Post() {
     }
 
     // 3.6
+    var setBold = document.getElementById("Bold");
+    var setItalic = document.getElementById("Italic");
     if (setBold.checked == true) {
         content_p.style.fontWeight = "bold";
     }
