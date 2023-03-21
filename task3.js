@@ -13,8 +13,8 @@ function mouseCount() {
 var blue = document.getElementById("blue");
 var red = document.getElementById("red");
 var number = document.getElementById("number");
-var bold = document.getElementById("bold");
-var italic = document.getElementById("italic");
+var setBold = document.getElementById("bold");
+var setItalic = document.getElementById("italic");
 
 function Post() {
     const date = new Date();
@@ -44,10 +44,10 @@ function Post() {
         content_p.style.color = "red";
     }
 
-    if (bold.checked == true) {
+    if (setBold.checked == true) {
         content_p.style.fontWeight = "bold";
     }
-    if (italic.checked == true) {
+    if (setItalic.checked == true) {
         content_p.style.fontStyle = "italic";
     }
 }
