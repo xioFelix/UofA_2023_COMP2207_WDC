@@ -64,3 +64,11 @@ function fsMenu() {
         main.style.display = "block";
     }
 }
+
+// 3.5
+function ChangeBgColor(){
+var bgColor = document.getElementById("backgroundColor");
+var bgColorSet = document.getElementById("bgColorSet");
+
+bgColor.style.backgroundColor = bgColorSet.value;
+}

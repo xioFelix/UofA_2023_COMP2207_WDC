@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body id="backgroundColor">
 
     <div id="main" class="container">
         <button type="button" class="right" onclick="fsMenu()">MENU</button>
@@ -41,7 +41,7 @@
     <div id="menu" class="container" style="display:none;">
         <button type="button" class="right" onclick="fsMenu()">BACK</button>
         <p>&nbsp;</p>
-        <span>Background Color:</span><input type="text">
+        <span>Background Color:</span><input type="text" id="bgColorSet" onchange= "ChangeBgColor()">
     </div>
 </body>
 
