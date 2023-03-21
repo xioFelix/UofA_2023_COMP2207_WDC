@@ -13,6 +13,8 @@ function mouseCount() {
 var blue = document.getElementById("blue");
 var red = document.getElementById("red");
 var number = document.getElementById("number");
+var bold = document.getElementById("bold");
+var italic = document.getElementById("italic");
 
 function Post() {
     const date = new Date();
@@ -41,12 +43,23 @@ function Post() {
     else if (red.checked == true) {
         content_p.style.color = "red";
     }
+    if (italic.checked == true && bold.checked == true) {
+        content_p.style.fontStyle = "italic";
+        content_p.style.fontWeight = "bold";
+    }
+    else if (bold.checked == true) {
+        content_p.style.fontWeight = "bold";
+    }
+    else if (italic.checked == true) {
+        content_p.style.fontStyle = "italic";
+    }
+
 }
 
-function creatPost(){
-for (let i = 0; i < number.value; i++) {
-    Post();
-}
+function creatPost() {
+    for (let i = 0; i < number.value; i++) {
+        Post();
+    }
 }
 
 // 3.3
@@ -66,9 +79,9 @@ function fsMenu() {
 }
 
 // 3.5
-function ChangeBgColor(){
-var bgColor = document.getElementById("backgroundColor");
-var bgColorSet = document.getElementById("bgColorSet");
+function ChangeBgColor() {
+    var bgColor = document.getElementById("backgroundColor");
+    var bgColorSet = document.getElementById("bgColorSet");
 
-bgColor.style.backgroundColor = bgColorSet.value;
+    bgColor.style.backgroundColor = bgColorSet.value;
 }
