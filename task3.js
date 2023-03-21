@@ -9,7 +9,12 @@ function mouseCount() {
 }
 
 // 3.2
-function creatPost() {
+
+var blue = document.getElementById("blue");
+var red = document.getElementById("red");
+var number = document.getElementById("number");
+
+function Post() {
     const date = new Date();
     // let date = d.toLocaleString();
 
@@ -21,23 +26,27 @@ function creatPost() {
     date_p.classList.add("post-time");
     content_p.classList.add("post-content");
 
-// 3.4
     date_p.innerText = date;
     content_p.innerText = document.getElementById("input-content").value;
 
     posts.appendChild(date_p);
     posts.appendChild(content_p);
 
-    var num = document.getElementById("num");
-    var blue = document.getElementById("blue");
-    var red = document.getElementById("red");
+    // 3.4
 
-    if(blue.checked == true){
-        content_p.style.color="blue";
+
+    if (blue.checked == true) {
+        content_p.style.color = "blue";
     }
-    else if(red.checked == true){
-        content_p.style.color="red";
+    else if (red.checked == true) {
+        content_p.style.color = "red";
     }
+}
+
+function creatPost(){
+for (let i = 0; i < number.value; i++) {
+    Post();
+}
 }
 
 // 3.3
