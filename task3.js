@@ -43,14 +43,11 @@ function Post() {
     else if(red.checked == true) {
         content_p.style.color = "red";
     }
-    if (italic.checked == true && bold.checked == true) {
-        content_p.style.fontStyle = "italic";
+
+    if (bold.checked == true) {
         content_p.style.fontWeight = "bold";
     }
-    else if (bold.checked == true) {
-        content_p.style.fontWeight = "bold";
-    }
-    else if (italic.checked == true) {
+    if (italic.checked == true) {
         content_p.style.fontStyle = "italic";
     }
 
