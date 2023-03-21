@@ -30,18 +30,18 @@ function creatPost() {
 }
 
 // 3.3
-let menu = document.getElementById("main");
-let back = document.getElementById("menu");
+let main = document.getElementById("main");
+let menu = document.getElementById("menu");
 
-menu.addEventListener("click", foldMenu);
-back.addEventListener("click", showMenu);
+main.addEventListener("click", foldMain);
+menu.addEventListener("click", showMain);
 
-function foldMenu() {
-    menu.style.display = "none";
-    back.style.display = "block";
+function foldMain() {
+    main.style.display = "none";
+    menu.style.display = "block";
 }
 
-function showMenu() {
-    menu.style.display = "block";
-    back.style.display = "none";
+function showMain() {
+    main.style.display = "block";
+    menu.style.display = "none";
 }
