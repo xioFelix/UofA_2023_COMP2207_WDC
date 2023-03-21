@@ -40,7 +40,7 @@ function Post() {
     if (blue.checked == true) {
         content_p.style.color = "blue";
     }
-    else if (red.checked == true) {
+    else if(red.checked == true) {
         content_p.style.color = "red";
     }
     if (italic.checked == true && bold.checked == true) {
