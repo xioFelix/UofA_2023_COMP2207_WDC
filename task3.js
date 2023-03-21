@@ -15,25 +15,36 @@ function creatPost() {
 
     var posts = document.getElementById("posts");
 
-    let date_p = document.createElement('P');
-    let content_p = document.createElement('P');
+    var date_p = document.createElement('P');
+    var content_p = document.createElement('P');
 
     date_p.classList.add("post-time");
     content_p.classList.add("post-content");
 
-
+// 3.4
     date_p.innerText = date;
     content_p.innerText = document.getElementById("input-content").value;
 
     posts.appendChild(date_p);
     posts.appendChild(content_p);
+
+    var num = document.getElementById("num");
+    var blue = document.getElementById("blue");
+    var red = document.getElementById("red");
+
+    if(blue.checked == true){
+        content_p.style.color="blue";
+    }
+    else if(red.checked == true){
+        content_p.style.color="red";
+    }
 }
 
 // 3.3
 function fsMenu() {
 
-    let main = document.getElementById("main");
-    let menu = document.getElementById("menu");
+    var main = document.getElementById("main");
+    var menu = document.getElementById("menu");
 
     if (menu.style.display === "none") {
         menu.style.display = "block";
