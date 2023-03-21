@@ -28,7 +28,7 @@
             <button type="button" onclick="creatPost()">Post</button>
         </div>
         <div class="controls left">
-            <input type="range" name="visible" min="1" max="10" value="10" /><br>
+            <input type="range" oninput="range()" name="visible" min="1" max="10" value="10" id="Range"/><br>
             <input type="checkbox" name="style" value="bold" id="B"/> Bold<br>
             <input type="checkbox" name="style" value="italic" id="I"/> Italic<br>
             <select>

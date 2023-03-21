@@ -81,3 +81,26 @@ function ChangeBgColor() {
 
     bgColor.style.backgroundColor = bgColorSet.value;
 }
+
+// 3.6
+function range() {
+    var Range = document.getElementById("Range").value;
+    var timeRange = document.getElementsByClassName("post-time");
+    var contentRange = document.getElementsByClassName("post-content");
+    if (Range > timeRange.length) {
+        for (var i = 0; i < timeRange.length; i++) {
+            timeRange[i].style.display = "block";
+            contentRange[i].style.display = "block";
+        }
+    } else {
+        for (var g = 0; g < timeRange.length; g++) {
+            timeRange[g].style.display = "none";
+            contentRange[g].style.display = "none";
+
+        }
+        for (var m = 0; m < timeRange; m++) {
+            timeRange[m].style.display = "block";
+            contentRange[m].style.display = "block";
+        }
+    }
+}
