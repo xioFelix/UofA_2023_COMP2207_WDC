@@ -13,7 +13,7 @@ function creatPost() {
     const date = new Date();
     // let date = d.toLocaleString();
 
-var posts = document.getElementById("posts");
+    var posts = document.getElementById("posts");
 
     let date_p = document.createElement('P');
     let content_p = document.createElement('P');
@@ -27,4 +27,21 @@ var posts = document.getElementById("posts");
 
     posts.appendChild(date_p);
     posts.appendChild(content_p);
+}
+
+// 3.3
+let menu = document.getElementById("main");
+let back = document.getElementById("menu");
+
+menu.addEventListener("click", foldMenu);
+back.addEventListener("click", showMenu);
+
+function foldMenu() {
+    menu.style.display = "none";
+    back.style.display = "block";
+}
+
+function showMenu() {
+    menu.style.display = "block";
+    back.style.display = "none";
 }
