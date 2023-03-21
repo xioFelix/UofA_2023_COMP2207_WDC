@@ -13,12 +13,14 @@ function mouseCount() {
 var blue = document.getElementById("blue");
 var red = document.getElementById("red");
 var number = document.getElementById("number");
+
 // 3.6
 var setBold = document.getElementById("Bold");
 var setItalic = document.getElementById("Italic");
 
 function Post() {
     const date = new Date();
+    // let date = d.toLocaleString();
 
     var posts = document.getElementById("posts");
 
@@ -34,18 +36,15 @@ function Post() {
     posts.appendChild(date_p);
     posts.appendChild(content_p);
 
-    var blue = document.getElementById("blue");
-    var red = document.getElementById("red");
-    var setBold = document.getElementById("Bold");
-    var setItalic = document.getElementById("Italic");
-
+    // 3.4
     if (blue.checked == true) {
         content_p.style.color = "blue";
     }
-    else if(red.checked == true) {
+    else if (red.checked == true) {
         content_p.style.color = "red";
     }
 
+    // 3.6
     if (setBold.checked == true) {
         content_p.style.fontWeight = "bold";
     }
@@ -53,7 +52,6 @@ function Post() {
         content_p.style.fontStyle = "italic";
     }
 }
-
 
 function creatPost() {
     for (let i = 0; i < number.value; i++) {
