@@ -50,7 +50,6 @@ function Post() {
     if (italic.checked == true) {
         content_p.style.fontStyle = "italic";
     }
-
 }
 
 function creatPost() {
