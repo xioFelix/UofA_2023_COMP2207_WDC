@@ -30,13 +30,15 @@ function creatPost() {
 }
 
 // 3.3
+function fsMenu() {
+
 let main = document.getElementById("main");
 let menu = document.getElementById("menu");
 
 main.addEventListener("click", fsMenu);
 menu.addEventListener("click", fsMenu);
 
-function fsMenu() {
+
     if(menu.style.display === "none"){
         menu.style.display = "block";
         main.style.display = "none";
