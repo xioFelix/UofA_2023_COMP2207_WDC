@@ -34,14 +34,14 @@ let main = document.getElementById("main");
 let menu = document.getElementById("menu");
 
 main.addEventListener("click", foldMain);
-menu.addEventListener("click", showMain);
+menu.addEventListener("click", foldMenu);
 
 function foldMain() {
     main.style.display = "none";
     menu.style.display = "block";
 }
 
-function showMain() {
+function foldMenu() {
     main.style.display = "block";
     menu.style.display = "none";
 }
