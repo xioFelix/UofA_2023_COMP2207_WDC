@@ -1,9 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+var timeStamp = null;
+
+router.get('/', function (req, res, next) {
+  res.render('index', { title: 'express'});
 });
 
-module.exports = router;
+router.get('/last.txt', (req, res, next) => {
+  console.log(`Last access: ${timeStamp}`);
+  timeStamp = new Date().toISOString();
+});
+
+module.exports=router;
