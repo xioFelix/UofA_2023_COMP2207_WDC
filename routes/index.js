@@ -10,6 +10,7 @@ router.get('/', function (req, res, next) {
 router.get('/last.txt', (req, res) => {
   console.log(`Last access: ${timeStamp}`);
   timeStamp = new Date().toISOString();
+  res.send(timeStamp);
 });
 
 module.exports=router;
