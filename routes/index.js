@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'express'});
 });
 
-router.get('/last.txt', (req, res, next) => {
+router.get('/last.txt', (req, res) => {
   console.log(`Last access: ${timeStamp}`);
   timeStamp = new Date().toISOString();
 });
