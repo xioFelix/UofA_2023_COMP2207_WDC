@@ -16,7 +16,7 @@ router.get('/last.txt', (req, res, next) => {
 router.get('/color.html', (req, res, next) => {
   let colors = ['red', 'yellow', 'green', 'blue'];
   colorIndex++;
-  let colorName = colors[colorIndex-1];
+  let colorName = colors[colorIndex - 1];
   const html = `
   <!DOCTYPE html>
   <html>
@@ -28,9 +28,30 @@ router.get('/color.html', (req, res, next) => {
   </body>
   </html>
   `;
-  console.log(colorIndex);
   colorIndex = colorIndex % (colors.length);
   res.send(html);
 });
 
-module.exports = router;
+let Logs = [];
+
+router.get('/log.html', (req, res) => {
+  Logs.push(new Date().toString());
+  let Dates = '';
+  for (let i = 0; i < Logs.length; i++) {
+    Dates += '<li>' + Logs[i] + '</li>';
+  }
+  let html =`
+    <html>
+    <head>
+    <title>Log</title>
+    </head>
+    <body>
+    <ul>${Dates}</ul>
+    </body>
+    </html>
+    `;
+
+  res.send(html);
+});
+
+  module.exports = router;
