@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
 
 router.get('/last.txt', (req, res, next) => {
   res.send(timeStamp);
-  timeStamp = new Date().toISOString();
+  var timeStamp = new Date().toISOString();
 });
 
 
@@ -53,17 +53,5 @@ router.get('/log.html', (req, res) => {
 
   res.send(html);
 });
-
-
-function lastTime() {
-
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function () {
-    document.getElementById("lastTime").innerHTML = this.responseText;
-  };
-  xhttp.open("GET", "http://localhost:8080/last.txt", true);
-  xhttp.send();
-}
-
 
 module.exports = router;
