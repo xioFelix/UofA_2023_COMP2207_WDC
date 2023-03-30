@@ -10,18 +10,6 @@ router.get('/', function (req, res, next) {
 router.get('/last.txt', (req, res, next) => {
   res.send(timeStamp);
   var timeStamp = new Date().toISOString();
-
-  // 4.1
-  function loadDoc() {
-    const xhttp = new XMLHttpRequest();
-    xhttp.onload = function () {
-      document.getElementById("lastTime").innerHTML = this.responseText;
-    };
-    xhttp.open("GET", "/last.txt");
-    xhttp.send();
-  }
-
-
 });
 
 
@@ -66,6 +54,15 @@ router.get('/log.html', (req, res) => {
   res.send(html);
 });
 
+  // 4.1
+  function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+      document.getElementById("lastTime").innerHTML = this.responseText;
+    };
+    xhttp.open("GET", "/last.txt");
+    xhttp.send();
+  }
 
 
 module.exports = router;
