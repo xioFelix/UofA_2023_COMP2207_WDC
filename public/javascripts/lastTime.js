@@ -1,6 +1,5 @@
 // 4.1
 function lastTime() {
-  document.getElementById("lastTime").innerHTML = "Hello";
   const xhttp = new XMLHttpRequest();
   xhttp.open("GET", "./last.txt", true);
   xhttp.send();
