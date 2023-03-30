@@ -1,3 +1,8 @@
+
+
+
+
+
 var express = require('express');
 var router = express.Router();
 var timeStamp = null;
@@ -9,7 +14,7 @@ router.get('/', function (req, res, next) {
 
 router.get('/last.txt', (req, res, next) => {
   res.send(timeStamp);
-  var timeStamp = new Date().toISOString();
+  timeStamp = new Date().toISOString();
 });
 
 
