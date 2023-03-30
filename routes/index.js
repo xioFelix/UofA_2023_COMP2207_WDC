@@ -60,8 +60,9 @@ router.get('/log.html', (req, res) => {
     xhttp.onload = function () {
       document.getElementById("lastTime").innerHTML = this.responseText;
     };
-    xhttp.open("GET", "/last.txt");
+    xhttp.open("POST", "/last.txt");
     xhttp.send();
+    alert("Load the function loadTime!");
   }
 
 
