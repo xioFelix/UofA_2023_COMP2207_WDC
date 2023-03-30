@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
 
 router.get('/last.txt', (req, res, next) => {
   // res.send(timeStamp);
-  timeStamp = new Date().toISOString();
+  var timeStamp = new Date().toISOString();
 
   let rqTime = new XMLHttpRequest();
   rqTime.onreadystatechange = function () {
@@ -62,5 +62,7 @@ router.get('/log.html', (req, res) => {
 
   res.send(html);
 });
+
+
 
 module.exports = router;
