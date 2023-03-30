@@ -54,4 +54,10 @@ router.get('/log.html', (req, res) => {
   res.send(html);
 });
 
+// 4.2
+router.get('/color.txt', (req, res, next) => {
+
+});
+
+
 module.exports = router;
