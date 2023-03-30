@@ -10,4 +10,5 @@
     };
     xhttp.open("GET", "./last.txt", true);
     xhttp.send();
+    console.log("Successfully use the lasttime function!");
   }
