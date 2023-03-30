@@ -11,13 +11,11 @@ router.get('/last.txt', (req, res, next) => {
   // res.send(timeStamp);
   var timeStamp = new Date().toISOString();
 
-  let rqTime = new XMLHttpRequest();
-  rqTime.onreadystatechange = function () {
+  let reqTime = new XMLHttpRequest();
+  reqTime.onreadystatechange = function () {
       document.getElementById("lastTime").innerText = `This page was last viewed ${timeStamp}`;
   };
-
-  rqTime.open("GET", "/last.txt");
-  rqTime.send();
+  reqTime.send();
 
 });
 
