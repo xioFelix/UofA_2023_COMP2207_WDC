@@ -5,6 +5,6 @@
     xhttp.onload = function () {
       document.getElementById("lastTime").innerHTML = this.responseText;
     };
-    xhttp.open("GET", "/last.txt");
+    xhttp.open("GET", "./last.txt");
     xhttp.send();
   }
