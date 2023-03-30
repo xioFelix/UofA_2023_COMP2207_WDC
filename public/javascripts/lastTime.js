@@ -1,5 +1,5 @@
   // 4.1
-  function loadTime() {
+  function lastTime() {
     alert("Load the function loadTime!");
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
@@ -7,5 +7,4 @@
     };
     xhttp.open("GET", "/last.txt");
     xhttp.send();
-    alert("Load the function loadTime!");
   }
