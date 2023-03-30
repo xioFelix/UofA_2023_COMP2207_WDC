@@ -19,7 +19,7 @@ router.get('/last.txt', (req, res, next) => {
   <title>Last</title>
  </head>
  <body>
- <p>This page was last viewed ${timeStamp}</p>
+ <p>This page was last viewed [${timeStamp}]</p>
  </body>
  </html>
  `;
