@@ -7,5 +7,4 @@
     };
     xhttp.open("GET", "http://localhost:8080/last.txt", true);
     xhttp.send();
-    alert(${this.responseText});
   }
