@@ -14,9 +14,9 @@ router.get('/last.txt', (req, res, next) => {
 
 
 router.get('/color.html', (req, res, next) => {
-  let colors = ['red', 'yellow', 'green', 'blue'];
+  var colors = ['red', 'yellow', 'green', 'blue'];
   colorIndex++;
-  let colorName = colors[colorIndex - 1];
+  var colorName = colors[colorIndex - 1];
   const html = `
   <!DOCTYPE html>
   <html>
