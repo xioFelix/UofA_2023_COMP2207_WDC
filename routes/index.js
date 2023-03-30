@@ -1,4 +1,3 @@
-
 var express = require('express');
 var router = express.Router();
 var timeStamp = null;
@@ -12,18 +11,13 @@ router.get('/last.txt', (req, res, next) => {
   // res.send(timeStamp);
   timeStamp = new Date().toISOString();
 
-  const last = `
- <!DOCTYPE html>
- <html>
- <head>
-  <title>Last</title>
- </head>
- <body>
- <p>This page was last viewed [${timeStamp}]</p>
- </body>
- </html>
- `;
-  res.send(last);
+  let rqTime = new XMLHttpRequest();
+  rqTime.onreadystatechange = function () {
+      document.getElementById("lastTime").innerText = `This page was last viewed ${timeStamp}`;
+  };
+
+  rqTime.open("GET", "/last.txt");
+  rqTime.send();
 
 });
 
