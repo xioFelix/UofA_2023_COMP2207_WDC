@@ -1,3 +1,4 @@
+
 var express = require('express');
 var router = express.Router();
 var timeStamp = null;
@@ -8,8 +9,22 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/last.txt', (req, res, next) => {
-  res.send(timeStamp);
+  // res.send(timeStamp);
   timeStamp = new Date().toISOString();
+
+  const last = `
+ <!DOCTYPE html>
+ <html>
+ <head>
+  <title>Last</title>
+ </head>
+ <body>
+ <p>This page was last viewed ${timeStamp}</p>
+ </body>
+ </html>
+ `;
+  res.send(last);
+
 });
 
 
@@ -40,7 +55,7 @@ router.get('/log.html', (req, res) => {
   for (let i = 0; i < Logs.length; i++) {
     Dates += '<li>' + Logs[i] + '</li>';
   }
-  let html =`
+  let html = `
     <html>
     <head>
     <title>Log</title>
@@ -54,4 +69,4 @@ router.get('/log.html', (req, res) => {
   res.send(html);
 });
 
-  module.exports = router;
+module.exports = router;
