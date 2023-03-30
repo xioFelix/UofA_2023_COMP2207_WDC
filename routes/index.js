@@ -8,14 +8,19 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/last.txt', (req, res, next) => {
-  // res.send(timeStamp);
+  res.send(timeStamp);
   var timeStamp = new Date().toISOString();
 
-  let reqTime = new XMLHttpRequest();
-  reqTime.onreadystatechange = function () {
-      document.getElementById("lastTime").innerText = `This page was last viewed ${timeStamp}`;
-  };
-  reqTime.send();
+  // 4.1
+  function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+      document.getElementById("lastTime").innerHTML = this.responseText;
+    };
+    xhttp.open("GET", "/last.txt");
+    xhttp.send();
+  }
+
 
 });
 
