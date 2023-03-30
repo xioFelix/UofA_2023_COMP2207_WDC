@@ -8,7 +8,7 @@
       xhttp.send();
       timeP.innerHTML = "Fail to Change";
       timeP.innerHTML = this.responseText;
-
+      console.log("Successfully use the xhttp function!");
     };
 
     console.log("Successfully use the lasttime function!");
