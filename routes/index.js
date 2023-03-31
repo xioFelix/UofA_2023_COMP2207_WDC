@@ -15,10 +15,10 @@ router.get('/last.txt', (req, res, next) => {
 
 router.get('/color.html', (req, res, next) => {
   let colorIndex = 0;
-let colors = ['red', 'yellow', 'green', 'blue'];
-colorIndex++;
-let colorName = colors[colorIndex - 1];
-colorIndex = colorIndex % (colors.length);
+  let colors = ['red', 'yellow', 'green', 'blue'];
+  colorIndex++;
+  let colorName = colors[colorIndex - 1];
+  colorIndex = colorIndex % (colors.length);
   changeColor();
   function changeColor() {
     const html = `
@@ -61,6 +61,11 @@ router.get('/log.html', (req, res) => {
 // 4.2
 
 router.get('/color.txt', (req, res) => {
+  let colorIndex = 0;
+  let colors = ['red', 'yellow', 'green', 'blue'];
+  colorIndex++;
+  let colorName = colors[colorIndex - 1];
+  colorIndex = colorIndex % (colors.length);
   res.send(colorName);
 });
 
