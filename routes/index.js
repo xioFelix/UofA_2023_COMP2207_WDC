@@ -60,9 +60,9 @@ router.get('/log.html', (req, res) => {
   // 4.3
   var logArray = [{ html: html }];
   var xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "log.json", true);
+  xhttp.open("POST", "log-ro.json", true);
   xhttp.setRequestHeader("Content-type", "application/json");
-  xhttp.send(logArray);
+  xhttp.send(JSON.stringify(logArray));
 });
 
 // 4.2
