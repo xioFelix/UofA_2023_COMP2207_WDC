@@ -60,22 +60,7 @@ router.get('/log.html', (req, res) => {
 
 // 4.2
 router.get('/color.txt', (req, res, next) => {
-  const xhttp = new XMLHttpRequest();
-
-  xhttp.onload = function changeColor() {
-
-    const xhttp = new XMLHttpRequest();
-    xhttp.onload = function () {
-      xhttp.open("GET", "./color.html", true);
-      xhttp.send();
-      if (xhttp.status === 200) {
-        let changeColor = document.getElementById("changeColor");
-        changeColor.innerHTML = colorName;
-        changeColor.style.color = colorName;
-      }
-    };
-  };
+  res.send(colorName);
 });
-
 
 module.exports = router;
