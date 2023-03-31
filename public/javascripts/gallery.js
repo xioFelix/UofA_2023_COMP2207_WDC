@@ -5,7 +5,7 @@ function changeImage() {
     .then(data => {
       const imageElement = document.getElementById('src');
       const descriptionElement = document.getElementById('alt-text');
-      imageElement.src = `./images/${data.uri}`;
+      imageElement.src = `/images/${data.uri}`;
       imageElement.alt = data.description;
       descriptionElement.innerText = data.description;
     });
