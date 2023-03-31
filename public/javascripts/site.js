@@ -30,7 +30,7 @@ function contact(){
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
         if(this.readyState == 4 && this.status == 200){
-            document.contentDiv.innerHTML = this.responseText;
+            document.createElement("div").innerHTML = this.responseText;
         }
     };
     xhttp.open("GET",'/contact.ajax', true);
@@ -42,8 +42,7 @@ function search(){
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
         if(this.readyState == 4 && this.status == 200){
-            var button1 = document.getElementById("search");
-            button1.innerHTML = this.responseText;
+            document.createElement("div").innerHTML = this.responseText;
         }
     };
     xhttp.open("GET",'/search.ajax');
