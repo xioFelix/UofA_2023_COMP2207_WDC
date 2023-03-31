@@ -59,9 +59,9 @@ router.get('/log.html', (req, res) => {
 
 // 4.2
 router.get('/color.txt', (req, res, next) => {
-  changeColor();
+changeColor();
   function changeColor() {
-    res.sendFile('../public/color2.html');
+    res.use('../public/color2.html');
     function color() {
       let color2 = new XMLHttpRequest();
       color2.onreadystatechange = function () {
