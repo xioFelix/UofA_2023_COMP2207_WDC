@@ -2,6 +2,10 @@ var express = require('express');
 var router = express.Router();
 var timeStamp = null;
 var colorIndex = 0;
+var colors = ['red', 'yellow', 'green', 'blue'];
+colorIndex++;
+var colorName = colors[colorIndex - 1];
+
 
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'express' });
@@ -15,10 +19,8 @@ router.get('/last.txt', (req, res, next) => {
 
 router.get('/color.html', (req, res, next) => {
   changeColor();
-  function changeColor(){var colors = ['red', 'yellow', 'green', 'blue'];
-  colorIndex++;
-  var colorName = colors[colorIndex - 1];
-  const html = `
+  function changeColor() {
+    const html = `
   <!DOCTYPE html>
   <html>
   <head>
@@ -29,8 +31,9 @@ router.get('/color.html', (req, res, next) => {
   </body>
   </html>
   `;
-  colorIndex = colorIndex % (colors.length);
-  res.send(html);}
+    colorIndex = colorIndex % (colors.length);
+    res.send(html);
+  }
 });
 
 let Logs = [];
@@ -63,7 +66,8 @@ router.get('/color.txt', (req, res, next) => {
   xhttp.onload = function () {
     if (xhttp.status === 200) {
       var changeColor = document.getElementById("changeColor");
-      changeColor.innerHTML = this.responseText;
+      changeColor.innerHTML = colorName;
+      changeColor.style.color=colorName;
     }
   };
 });
