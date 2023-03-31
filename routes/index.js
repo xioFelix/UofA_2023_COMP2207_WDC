@@ -64,7 +64,6 @@ router.get('/color.txt', (req, res) => {
   colorIndex++;
   let colorName = colors[colorIndex - 1];
   colorIndex = colorIndex % (colors.length);
-  console.log(colorName);
   res.send(colorName);
 });
 
