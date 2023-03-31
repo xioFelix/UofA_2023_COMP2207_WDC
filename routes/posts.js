@@ -1,3 +1,6 @@
+var express = require('express');
+var router = express.Router();
+var qs = require('qs');
 var posts = [{ author:"Charles Dickens", authorWeb:"http://www.gutenberg.org/ebooks/author/37", time:-3242465804, content: "<p> "+
 "My father's family name being Pirrip, and my Christian name Philip, my "+
 "infant tongue could make of both names nothing longer or more explicit "+
@@ -242,3 +245,20 @@ var posts = [{ author:"Charles Dickens", authorWeb:"http://www.gutenberg.org/ebo
 "man, and could see no signs of him. But now I was frightened again, and "+
 "ran home without stopping. "+
 "</p>"}];
+
+router.get('/', function(req, res, next) {
+    let num = req.query.num;
+    let first = req.query.first;
+    if ((typeof first === 'number' && first%1 === 0) || first < 0 || !first){
+      first = 0;
+    }
+    if ((typeof num === 'number' && num%1 === 0) || num < 1 || !num){
+      res.send(JSON.stringify(posts));
+    }
+    else{
+      let end = parseInt(first) +parseInt(num);
+      res.send(JSON.stringify(posts.slice(first,end)));
+    }
+});
+
+module.exports = router;
