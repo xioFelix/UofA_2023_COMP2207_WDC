@@ -94,10 +94,9 @@ router.get('/about.ajax', (req, res) => {
 let currentIndex = 0;
 
 router.get('/images.json', (req, res) => {
-  
-  const currentImage = images[currentIndex];
-  currentIndex = (currentIndex + 1) % images.length;
-  res.json(currentImage);
+let i
+  var ID = [i % 10];
+i++;
 });
 
 module.exports = router;
