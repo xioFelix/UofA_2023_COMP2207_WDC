@@ -12,12 +12,12 @@ router.get('/last.txt', (req, res, next) => {
   res.send(timeStamp);
   timeStamp = new Date().toISOString();
 
-    // 4.3
-    var logArray = [{ timeStamp: timeStamp }];
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "log-ro.json", true);
-    xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send(JSON.stringify(logArray));
+  // 4.3
+  var logArray = [{ timeStamp: timeStamp }];
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "log-ro.json", true);
+  xhttp.setRequestHeader("Content-type", "application/json");
+  xhttp.send(JSON.stringify(logArray));
 });
 
 
@@ -89,8 +89,5 @@ router.get('/search.ajax', (req, res) => {
 router.get('/about.ajax', (req, res) => {
   res.send(`<input type="text" placeholder="about"><button>about</button>`);
 });
-
-
-
 
 module.exports = router;

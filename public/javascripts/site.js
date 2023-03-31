@@ -3,7 +3,7 @@ const contactButton = document.getElementById('contact');
 const searchButton = document.getElementById('search');
 const aboutButton = document.getElementById('about');
 
-function loadPage(url) {
+function loadSite(url) {
   fetch(url)
     .then(response => response.text())
     .then(html => contentDiv.innerHTML = html)
@@ -11,13 +11,13 @@ function loadPage(url) {
 }
 
 contactButton.addEventListener('click', () => {
-  loadPage('/contact.ajax');
+  loadSite('/contact.ajax');
 });
 
 searchButton.addEventListener('click', () => {
-  loadPage('/search.ajax');
+  loadSite('/search.ajax');
 });
 
 aboutButton.addEventListener('click', () => {
-  loadPage('/about.ajax');
+  loadSite('/about.ajax');
 });
