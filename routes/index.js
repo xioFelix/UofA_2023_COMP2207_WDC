@@ -63,8 +63,8 @@ router.get('/color.txt', (req, res) => {
 
   let colors = ['red', 'yellow', 'green', 'blue'];
   colorIndex2++;
-  let colorName = colors[colorIndex - 1];
-  colorIndex = colorIndex % (colors.length);
+  let colorName = colors[colorIndex2 - 1];
+  colorIndex2 = colorIndex2 % (colors.length);
   res.send(colorName);
 });
 
