@@ -58,17 +58,6 @@ router.get('/log.html', (req, res) => {
 });
 
 // 4.2
-function changeColor() {
-  let xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("heading").style.color = this.responseText;
-      document.getElementById("heading").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "/color.txt", true);
-  xhttp.send();
-}
 
 router.get('/color.txt', (req, res) => {
   res.send(colorName);

@@ -4,13 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <title>color2.html</title>
-    <script src="../routes/index.js" defer></script>
+
 </head>
 
 <body oncload="changeColor()">
     <h1 id="changeColor">Init</h1>
     <button type="button" onclick="changeColor()">Change color</button>
-
+    <script>
+        function changeColor() {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("changeColor").style.color = this.responseText;
+                    document.getElementById("changeColor").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "/color.txt", true);
+            xhttp.send();
+        }
+    </script>
 </body>
 
 </html>
