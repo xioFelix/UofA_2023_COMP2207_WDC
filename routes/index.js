@@ -56,6 +56,11 @@ router.get('/log.html', (req, res) => {
     `;
 
   res.send(html);
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "log.json", true);
+  xhttp.setRequestHeader("Content-type", "application/json");
+  xhttp.send(logJson);
 });
 
 // 4.2
