@@ -59,13 +59,13 @@ router.get('/log.html', (req, res) => {
 });
 
 // 4.2
-
 router.get('/color.txt', (req, res) => {
   let colorIndex = 0;
   let colors = ['red', 'yellow', 'green', 'blue'];
   colorIndex++;
   let colorName = colors[colorIndex - 1];
   colorIndex = colorIndex % (colors.length);
+  console.log(colorName);
   res.send(colorName);
 });
 
