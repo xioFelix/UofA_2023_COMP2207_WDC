@@ -18,7 +18,6 @@ router.get('/last.txt', (req, res, next) => {
     xhttp.open("POST", "log-ro.json", true);
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(logArray));
-    
 });
 
 
@@ -77,5 +76,19 @@ router.get('/color.txt', (req, res) => {
   colorIndex2 = colorIndex2 % (colors.length);
   res.send(colorName);
 });
+
+// 4.4
+router.get('/contact.ajax', (req, res) => {
+  res.send('< a href=" ">Contact us</ a>');
+});
+
+router.get('/search.ajax', (req, res) => {
+  res.send(`<input type="text" placeholder="Search"><button>Search</button>`);
+});
+
+router.get('/about.ajax', (req, res) => {
+  res.send(`<input type="text" placeholder="about"><button>about</button>`);
+});
+
 
 module.exports = router;
