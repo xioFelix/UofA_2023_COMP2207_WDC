@@ -4,12 +4,11 @@ function changeImage() {
     .then(response => response.json())
     .then(data => {
       const imageElement = document.getElementById('src');
-      const descriptionElement = document.getElementById('alt-text');
-      imageElement.src = `/images/${data.uri}`;
+      const des = document.getElementById('alt-text');
+      imageElement.src = `../images/${data.uri}`;
       imageElement.alt = data.description;
-      descriptionElement.innerText = data.description;
-    })
-    .catch(data => console.log(data));
+      des.innerText = data.description;
+    });
 }
 
 changeImage();
