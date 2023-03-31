@@ -8,8 +8,7 @@ function changeImage() {
       imageElement.src = `./images/${data.uri}`;
       imageElement.alt = data.description;
       descriptionElement.innerText = data.description;
-    })
-    .catch(data => console.log(data));
+    });
 }
 
 changeImage();
