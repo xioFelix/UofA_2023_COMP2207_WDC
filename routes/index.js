@@ -18,6 +18,7 @@ router.get('/last.txt', (req, res, next) => {
     xhttp.open("POST", "log-ro.json", true);
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(logArray));
+    
 });
 
 
