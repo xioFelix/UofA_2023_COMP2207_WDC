@@ -60,7 +60,7 @@ router.get('/log.html', (req, res) => {
 
 // 4.2
 router.get('/color.txt', (req, res, next) => {
-  res.readfile("../color2.html");
+  res.readfile("localhost:8080/color2.html");
 });
 
 module.exports = router;
