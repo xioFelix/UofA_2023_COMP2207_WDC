@@ -1,7 +1,7 @@
 function changeImage() {
 
-  fetch('./images.js')
-    .then(response => response.json())
+  fetch('/images.js')
+    .then(response => response.js())
     .then(data => {
       const imageElement = document.getElementById("src");
       const altText = document.getElementById("alt-text");
