@@ -5,7 +5,7 @@ var colorIndex = 0;
 var colors = ['red', 'yellow', 'green', 'blue'];
 colorIndex++;
 var colorName = colors[colorIndex - 1];
-
+var colorIndex = colorIndex % (colors.length);
 
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'express' });
@@ -31,7 +31,6 @@ router.get('/color.html', (req, res, next) => {
   </body>
   </html>
   `;
-    colorIndex = colorIndex % (colors.length);
     res.send(html);
   }
 });
@@ -62,10 +61,7 @@ router.get('/log.html', (req, res) => {
 router.get('/color.txt', (req, res, next) => {
   changeColor();
   function changeColor() {
-    colorIndex = colorIndex % (colors.length);
-
     res.sendFile('../public/color2.html');
-
     function color() {
       let color2 = new XMLHttpRequest();
       color2.onreadystatechange = function () {
