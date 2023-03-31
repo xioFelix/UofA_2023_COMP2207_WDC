@@ -1,13 +1,20 @@
 function changeImage() {
+  const images = document.getElementById("src");
+  const description = document.getElementById("alt-text");
 
-  fetch('/images.js')
-    .then(data => {
-      let imageElement = document.getElementById("src");
-      let altText = document.getElementById("alt-text");
-      imageElement.src = `/images/${data.uri}`;
-      imageElement.alt = data.description;
-      altText.innerText = data.description;
-    });
+  const image = new XMLHttpRequest();
+  image.onreadystatechange = function () {
+    if (image.readyState === XMLHttpRequest.DONE) {
+      if (image.status === 200) {
+        const data = JSON.parse(image.responseText);
+        images.src = "images/" + data.uri;
+        images.alt = data.description;
+        description.innerText = data.description;
+      }
+    }
+  };
+  image.open("GET", "/images.json", true);
+  image.send();
 }
 
 changeImage();
