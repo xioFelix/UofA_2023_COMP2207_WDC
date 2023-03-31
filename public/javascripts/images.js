@@ -10,3 +10,6 @@ var images = [
     { uri:'photo-1562220058-1a0a019ab606.jpg',    description:'pet dog laying on sofa' },
     { uri:'photo-1565194481104-39d1ee1b8bcc.jpg', description:'short-coated gray dog' }
 ];
+
+    const currentImage = images[currentIndex];
+    currentIndex = (currentIndex + 1) % images.length;
