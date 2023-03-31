@@ -64,7 +64,7 @@ router.get('/log.html', (req, res) => {
 
   res.send(html);
 
-  const myTimeout = setTimeout(myGreeting, 10000);
+  const myTimeout = setTimeout(Logs, 10000);
 });
 
 // 4.2
