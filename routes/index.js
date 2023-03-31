@@ -58,24 +58,20 @@ router.get('/log.html', (req, res) => {
 });
 
 // 4.2
-router.get('/color.txt', (req, res, next) => {
-changeColor();
-  function changeColor() {
-    res.use('../public/color2.html');
-    function color() {
-      let color2 = new XMLHttpRequest();
-      color2.onreadystatechange = function () {
-        if (color2.readyState == 4 && color2.status == 200) {
-          let h1 = document.getElementById("changeColor");
-          h1.innerText = color2.response;
-          h1.style.color = color2.response;
-        }
-      };
-      color2.open("GET", `color.html`);
-      color2.send();
-    }
-    color();
-}
+function changeColor() {
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("heading").style.color = this.responseText;
+        document.getElementById("heading").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "/color.txt", true);
+    xhttp.send();
+  }
+
+  router.get('/color.txt', (req, res) => {
+res.send(colorName);
   });
 
 module.exports = router;
