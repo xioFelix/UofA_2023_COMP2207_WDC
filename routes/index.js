@@ -84,8 +84,8 @@ router.get('/contact.ajax', (req, res) => {
 });
 
 router.get('/search.ajax', (req, res) => {
-  const searching = '<input type = "text" placeholder = "Search"><button>search</button>';
-  res.send(searching);
+  const search = '<input type = "text" placeholder = "Search"><button>search</button>';
+  res.send(search);
 });
 
 router.get('/about.ajax', (req, res) => {
