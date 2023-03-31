@@ -60,7 +60,7 @@ router.get('/log.html', (req, res) => {
 
 // 4.2
 router.get('/color.txt', (req, res, next) => {
-  res.send(colorName);
+  changeColor();
 });
 
 module.exports = router;
