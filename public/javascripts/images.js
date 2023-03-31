@@ -16,8 +16,8 @@ function changeImage() {
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == XMLHttpRequest.DONE) {
             if (this.readyState == 4 && this.status == 200) {
-                var image = document.getElementById("image");
-                var description = document.getElementById("description");
+                var image = document.getElementById("src");
+                var description = document.getElementById("alt-text");
                 var data = JSON.parse(xhttp.responseText);
                 image.src = "images/" + images[data].uri;
                 image.alt = images[data].description;
