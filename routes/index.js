@@ -76,8 +76,7 @@ router.get('/color.txt', (req, res, next) => {
     }
     color();
 
-  }
-}
+  }；
 );
 
 module.exports = router;
