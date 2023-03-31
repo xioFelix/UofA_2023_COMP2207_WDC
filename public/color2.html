@@ -6,8 +6,7 @@
     <title>color2.html</title>
 
 </head>
-
-<body oncload="changeColor()">
+<body onload="changeColor()">
     <h1 id="changeColor">Init</h1>
     <button type="button" onclick="changeColor()">Change color</button>
     <script>
@@ -19,7 +18,7 @@
                     document.getElementById("changeColor").innerHTML = this.responseText;
                 }
             };
-            xhttp.open("GET", "/color.txt", true);
+            xhttp.open("GET", "/color.html", true);
             xhttp.send();
         }
     </script>
