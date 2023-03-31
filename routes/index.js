@@ -5,7 +5,7 @@ var colorIndex = 0;
 var colors = ['red', 'yellow', 'green', 'blue'];
 colorIndex++;
 var colorName = colors[colorIndex - 1];
-var colorIndex = colorIndex % (colors.length);
+colorIndex = colorIndex % (colors.length);
 
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'express' });
@@ -73,9 +73,9 @@ router.get('/color.txt', (req, res, next) => {
       };
       color2.open("GET", `color.html`);
       color2.send();
-    };
+    }
     color();
-};
+}
   });
 
 module.exports = router;
