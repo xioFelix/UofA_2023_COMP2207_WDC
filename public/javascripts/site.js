@@ -21,5 +21,3 @@ searchBtn.addEventListener('click', () => {
 aboutBtn.addEventListener('click', () => {
   loadPage('/about.ajax');
 });
-
-\
