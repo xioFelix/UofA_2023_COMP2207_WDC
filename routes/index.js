@@ -61,7 +61,7 @@ router.get('/log.html', (req, res) => {
 // 4.2
 router.get('/color.txt', (req, res, next) => {
   const xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "../color2.html", true);
+  xhttp.open("GET", "color2.html", true);
   xhttp.send();
   xhttp.onload = function () {
     if (xhttp.status === 200) {
