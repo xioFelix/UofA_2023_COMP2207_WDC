@@ -7,7 +7,7 @@ function changeImage() {
     if (image.readyState === XMLHttpRequest.DONE) {
       if (image.status === 200) {
         const data = JSON.parse(image.responseText);
-        images.src = "images/" + data.uri;
+        images.src = `images/${data.uri}`;
         images.alt = data.description;
         description.innerText = data.description;
       }
