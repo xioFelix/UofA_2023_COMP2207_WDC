@@ -79,7 +79,7 @@ router.get('/color.txt', (req, res) => {
 
 // 4.4
 router.get('/contact.ajax', (req, res) => {
-  res.send('< a href=" ">Contact us</ a>');
+  res.send('<a href="outlook.com">Contact us</a>');
 });
 
 router.get('/search.ajax', (req, res) => {
