@@ -24,8 +24,8 @@
 
 
 // 4.2
-// contact
 
+// contact
 function contact(){
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
@@ -37,9 +37,7 @@ function contact(){
     xhttp.send();
 }
 
-
 // search
-
 function search(){
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
