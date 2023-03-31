@@ -61,6 +61,22 @@ router.get('/log.html', (req, res) => {
 // 4.2
 router.get('/color.txt', (req, res, next) => {
   changeColor();
+  function changeColor() {
+    const html = `
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Change Color</title>
+  </head>
+  <body>
+  <h1 style="color:${colorName}">${colorName}</h1>
+      <button type="button" onclick="changeColor()">Change color</button>
+  </body>
+  </html>
+  `;
+    colorIndex = colorIndex % (colors.length);
+    res.send(html);
+  }
 });
 
 module.exports = router;
