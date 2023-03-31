@@ -7,15 +7,15 @@
 
 </head>
 <body onload="changeColor()">
-    <h1 id="changeColor">Init</h1>
+    <h1 id="Color2">Init</h1>
     <button type="button" onclick="changeColor()">Change color</button>
     <script>
         function changeColor() {
             let xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("changeColor").style.color = this.responseText;
-                    document.getElementById("changeColor").innerHTML = this.responseText;
+                    document.getElementById("Color2").style.color = this.responseText;
+                    document.getElementById("Color2").innerHTML = this.responseText;
                 }
             };
             xhttp.open("GET", "/color.txt", true);
