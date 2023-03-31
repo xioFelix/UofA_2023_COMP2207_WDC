@@ -91,12 +91,11 @@ router.get('/about.ajax', (req, res) => {
 });
 
 // 4.6
-let currentIndex = 0;
-
+let imagesIndex = 0;
 router.get('/images.json', (req, res) => {
-let i
-  var ID = [i % 10];
-i++;
+    const currentImage = images[currentIndex];
+    currentIndex = (currentIndex + 1) % images.length;
+    res.json(currentImage);
 });
 
 module.exports = router;
