@@ -1,7 +1,7 @@
 const contentDiv = document.querySelector('#content');
-const contactBtn = document.getElementById('contact');
-const searchBtn = document.getElementById('search');
-const aboutBtn = document.getElementById('about');
+const contactBtn = document.querySelector('#contact');
+const searchBtn = document.querySelector('#search');
+const aboutBtn = document.querySelector('#about');
 
 function loadSite(url) {
   fetch(url)
