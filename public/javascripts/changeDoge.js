@@ -1,7 +1,7 @@
 // 4.6
 function changeImage() {
-    const image = document.getElementById("image");
-    const description = document.getElementById("description");
+    const image = document.getElementById("src");
+    const description = document.getElementById("alt-text");
 
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
