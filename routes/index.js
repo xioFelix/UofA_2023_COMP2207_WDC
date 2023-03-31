@@ -75,7 +75,7 @@ router.get('/color.txt', (req, res, next) => {
       color2.send();
     };
     color();
-}
+};
   });
 
 module.exports = router;
