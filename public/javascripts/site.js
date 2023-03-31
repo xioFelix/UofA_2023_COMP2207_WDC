@@ -1,7 +1,7 @@
 const contentDiv = document.querySelector('#content');
-const contactBtn = document.querySelector('#contact');
-const searchBtn = document.querySelector('#search');
-const aboutBtn = document.querySelector('#about');
+const contactButton = document.querySelector('#contact');
+const searchButton = document.querySelector('#search');
+const aboutButton = document.querySelector('#about');
 
 function loadPage(url) {
   fetch(url)
@@ -10,14 +10,14 @@ function loadPage(url) {
     .catch(error => console.log(error));
 }
 
-contactBtn.addEventListener('click', () => {
+contactButton.addEventListener('click', () => {
   loadPage('/contact.ajax');
 });
 
-searchBtn.addEventListener('click', () => {
+searchButton.addEventListener('click', () => {
   loadPage('/search.ajax');
 });
 
-aboutBtn.addEventListener('click', () => {
+aboutButton.addEventListener('click', () => {
   loadPage('/about.ajax');
 });
