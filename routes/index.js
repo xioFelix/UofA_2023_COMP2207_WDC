@@ -79,15 +79,18 @@ router.get('/color.txt', (req, res) => {
 
 // 4.4
 router.get('/contact.ajax', (req, res) => {
-  res.send(`<a href = "https://www.myuni.adelaide.edu.au">Contact us</a>`);
+  const link = '<a href = " ">contact us</ a>';
+  res.send(emailLink);
 });
 
 router.get('/search.ajax', (req, res) => {
-  res.send(`<input type="text" placeholder="Search"><button>Search</button>`);
+  const search = '<input type = "text" placeholder = "Search"><button>search</button>';
+  res.send(search);
 });
 
 router.get('/about.ajax', (req, res) => {
-  res.send(`<input type="text" placeholder="about"><button>about</button>`);
+  const about = '<input type = "text" placeholder = "about"><button>about</button>';
+  res.send(about);
 });
 
 // 4.6
