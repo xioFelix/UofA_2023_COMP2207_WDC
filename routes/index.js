@@ -1,11 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var timeStamp = null;
-var colorIndex = 0;
-var colors = ['red', 'yellow', 'green', 'blue'];
-colorIndex++;
-var colorName = colors[colorIndex - 1];
-colorIndex = colorIndex % (colors.length);
+
 
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'express' });
@@ -18,6 +14,11 @@ router.get('/last.txt', (req, res, next) => {
 
 
 router.get('/color.html', (req, res, next) => {
+  let colorIndex = 0;
+let colors = ['red', 'yellow', 'green', 'blue'];
+colorIndex++;
+let colorName = colors[colorIndex - 1];
+colorIndex = colorIndex % (colors.length);
   changeColor();
   function changeColor() {
     const html = `
