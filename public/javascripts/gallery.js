@@ -1,6 +1,6 @@
 function changeImage() {
 
-  fetch('/images.json')
+  fetch('./images.js')
     .then(response => response.json())
     .then(data => {
       const imageElement = document.getElementById("src");
