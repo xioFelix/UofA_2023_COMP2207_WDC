@@ -61,13 +61,14 @@ router.get('/log.html', (req, res) => {
 // 4.2
 router.get('/color.txt', (req, res, next) => {
   const xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "color2.html", true);
-  xhttp.send();
-  xhttp.onload = function () {
+
+  xhttp.onload = function ajaxChangeColor() {
+    xhttp.open("GET", "./color.html", true);
+    xhttp.send();
     if (xhttp.status === 200) {
       var changeColor = document.getElementById("changeColor");
       changeColor.innerHTML = colorName;
-      changeColor.style.color=colorName;
+      changeColor.style.color = colorName;
     }
   };
 });
