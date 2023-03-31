@@ -1,7 +1,7 @@
-const contentDiv = document.getElementById('content');
-const contactBtn = document.getElementById('contact');
-const searchBtn = document.getElementById('search');
-const aboutBtn = document.getElementById('about');
+const contentDiv = document.getElementById('#content');
+const contactBtn = document.getElementById('#contact');
+const searchBtn = document.getElementById('#search');
+const aboutBtn = document.getElementById('#about');
 
 function loadSite(url) {
   fetch(url)
