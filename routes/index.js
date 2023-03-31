@@ -13,7 +13,7 @@ router.get('/last.txt', (req, res, next) => {
   timeStamp = new Date().toISOString();
 
     // 4.3
-    var logArray = [{ httimeStampml: timeStamp }];
+    var logArray = [{ timeStamp: timeStamp }];
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "log-ro.json", true);
     xhttp.setRequestHeader("Content-type", "application/json");
@@ -63,6 +63,8 @@ router.get('/log.html', (req, res) => {
     `;
 
   res.send(html);
+
+  const myTimeout = setTimeout(myGreeting, 10000);
 });
 
 // 4.2
