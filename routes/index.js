@@ -66,13 +66,12 @@ router.get('/color.txt', (req, res, next) => {
 
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
-      changeColor(this);
       xhttp.open("GET", "./color.html", true);
       xhttp.send();
       if (xhttp.status === 200) {
         let changeColor = document.getElementById("changeColor");
-        changeColor.innerHTML = this.responseText;
-        changeColor.style.color = this.responseText;
+        changeColor.innerHTML = colorName;
+        changeColor.style.color = colorName;
       }
     };
   };
