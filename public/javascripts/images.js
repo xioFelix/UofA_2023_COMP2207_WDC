@@ -11,3 +11,4 @@ var images = [
     { uri: 'photo-1565194481104-39d1ee1b8bcc.jpg', description: 'short-coated gray dog' }
 ];
 
+module.exports = images;
