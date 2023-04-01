@@ -1,15 +1,19 @@
 function changeImage() {
+  const image = document.getElementById("image");
+  const description = document.getElementById("description");
 
-  fetch('/images.json')
-    .then(response => response.json())
-    .then(data => {
-      const imageElement = document.getElementById('src');
-      const descriptionElement = document.getElementById('alt-text');
-      imageElement.src = `/images/${data.uri}`;
-      imageElement.alt = data.description;
-      descriptionElement.innerText = data.description;
-    });
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "/images.json", true);
+  xhr.send();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        const data = JSON.parse(xhr.responseText);
+        image.src = "images/"+data.uri;
+        image.alt = data.description;
+        description.innerText = data.description;
+      }
+    }
+  };
 }
-
-changeImage();
 setInterval(changeImage, 10000);

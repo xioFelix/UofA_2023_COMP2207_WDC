@@ -11,23 +11,10 @@ var images = [
     { uri: 'photo-1565194481104-39d1ee1b8bcc.jpg', description: 'short-coated gray dog' }
 ];
 
-function changeImage() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (xhttp.readyState == XMLHttpRequest.DONE) {
-            if (this.readyState == 4 && this.status == 200) {
-                var image = document.getElementById("src");
-                var description = document.getElementById("alt-text");
-                var data = JSON.parse(xhttp.responseText);
-                image.src = "images/" + images[data].uri;
-                image.alt = images[data].description;
-                description.innerText = images[data].description;
-            }
-        }
-    };
-    xhttp.open("GET", "/images.json", true);
-    xhttp.send();
-}
+let currentIndex = 0;
 
-changeImage();
-setInterval(changeImage, 10000);
+router.get('/images.json', (req, res) => {
+  const currentImage = images[currentIndex];
+  currentIndex = (currentIndex + 1) % images.length;
+  res.json(currentImage);
+});
