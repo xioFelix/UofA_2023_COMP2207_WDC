@@ -1,11 +1,5 @@
 const contentDiv = document.querySelector('#content');
 
-function loadFunction(url) {
-  fetch(url)
-    .then(response => response.text())
-    .then(html => document.querySelector('#content').innerHTML = html);
-}
-
 function contact() {
   const contact = new XMLHttpRequest();
   contact.onreadystatechange = function() {
