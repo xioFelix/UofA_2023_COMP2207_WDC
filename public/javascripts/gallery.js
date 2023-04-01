@@ -1,5 +1,5 @@
 function changeImage() {
-  const image = document.getElementById("image");
+  const image = document.getElementById("imageUri");
   const description = document.getElementById("description");
 
   const xhr = new XMLHttpRequest();
