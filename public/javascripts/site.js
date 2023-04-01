@@ -1,23 +1,17 @@
-const contentDiv = document.querySelector('#content');
-const contactBtn = document.querySelector('#contact');
-const searchBtn = document.querySelector('#search');
-const aboutBtn = document.querySelector('#about');
-
-function loadSite(url) {
+function loadFunction(url) {
   fetch(url)
     .then(response => response.text())
-    .then(html => contentDiv.innerHTML = html)
-    .catch(data => console.log(data));
+    .then(html => document.querySelector('#content').innerHTML = html);
 }
 
-contactBtn.addEventListener('click', () => {
-  loadSite('/contact.ajax');
-});
+function contact(){
+  loadFunction('/contact.ajax');
+}
 
-searchBtn.addEventListener('click', () => {
-  loadSite('/search.ajax');
-});
+function search(){
+  loadFunction('/search.ajax');
+}
 
-aboutBtn.addEventListener('click', () => {
-  loadSite('/about.ajax');
-});
+function about(){
+  loadFunction('/about.ajax');
+}
