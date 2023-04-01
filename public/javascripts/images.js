@@ -11,10 +11,3 @@ var images = [
     { uri: 'photo-1565194481104-39d1ee1b8bcc.jpg', description: 'short-coated gray dog' }
 ];
 
-let currentIndex = 0;
-
-router.get('/images.json', (req, res) => {
-  const currentImage = images[currentIndex];
-  currentIndex = (currentIndex + 1) % images.length;
-  res.json(currentImage);
-});
