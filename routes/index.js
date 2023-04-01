@@ -94,7 +94,7 @@ router.get('/about.ajax', (req, res) => {
 });
 
 // 4.6
-let currentIndex = 0;
+let imageIndex = 0;
 
 var images = [
   { uri: 'photo-1539154444419-e31272d30a31.jpg', description: 'medium-coated black-and-white dog near grass during daytime' },
@@ -111,8 +111,8 @@ var images = [
 
 router.get('/images.json', (req, res) => {
 
-  const currentImage = images[currentIndex];
-  currentIndex = (currentIndex + 1) % images.length;
+  const currentImage = images[imageIndex];
+  imageIndex = (imageIndex + 1) % images.length;
   res.json(currentImage);
 });
 
