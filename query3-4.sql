@@ -1,4 +1,3 @@
-SELECT given_name, family_name
-
-FROM Subjects
-WHERE subject = 'Web and Database Computing';
+SELECT student_id
+FROM Enrolments
+WHERE subject_code = 'COMP SCI 2207';
