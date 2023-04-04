@@ -1,5 +1,5 @@
-SELECT Students.given_name, Students.family_name
-FROM Students
+SELECT subject_code
+FROM Subjects
 INNER JOIN Enrolments
-ON Enrolments.student_id = Students.student_id
-WHERE Enrolments.mark < 50;
+ON Enrolments.subject_code = Subjects.subject_code
+WHERE subject = 'Computer Systems'
