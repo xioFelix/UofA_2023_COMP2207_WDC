@@ -1,3 +1,4 @@
 SELECT given_name, family_name
-FROM Students
-WHERE program = 'BCompSc';
+
+FROM Subjects
+WHERE subject = 'Web and Database Computing';
