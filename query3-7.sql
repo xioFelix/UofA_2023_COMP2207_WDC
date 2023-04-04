@@ -1,1 +1,1 @@
-DESCRIBE Subjects;
+DESCRIBE Teachers;
