@@ -1,5 +1,5 @@
-SELECT student_id, students.first_name, students.last_name
-FROM Enrolments
+SELECT Students.given_name, Students.family_name
+FROM Students
 WHERE subject_code = 'COMP SCI 2207';
 INNER JOIN Students
-ON registration.student_id = students.student_id;
+ON Enrolments.student_id = Students.student_id;
