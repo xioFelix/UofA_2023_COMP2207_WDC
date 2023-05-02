@@ -66,6 +66,6 @@ vueinst.$watch('choose', function (newValue) {
     document.querySelector('#sp').textContent = newValue;
 });
 
-vueinst.$watch('show_ad', function (newValue) {
-    document.querySelector('#ad').textContent = newValue;
-});
+// vueinst.$watch('show_ad', function (newValue) {
+//     document.querySelector('#ad').textContent = newValue;
+// });
