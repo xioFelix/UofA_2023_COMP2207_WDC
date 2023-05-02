@@ -31,7 +31,6 @@ Stores (task 1.8):
 { name:'Adelaide City',  address:'45 Florabunda Lane, Adelaide, 5000', counter: 0, img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/11_Gloddaeth_Street%2C_Llandudno_shop_front.jpg/320px-11_Gloddaeth_Street%2C_Llandudno_shop_front.jpg' },
 { name:'Steelton South', address:'77 Weigall Avenue, Steelton, 5413',  counter: 0, img:'https://upload.wikimedia.org/wikipedia/commons/4/42/Well-shop-front.jpg' },
 { name:'Milton',         address:'33 McGregor Street, Milton, 5880',   counter: 0, img:'https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Greggs_store_front.JPG/320px-Greggs_store_front.JPG' }
-
 */
 
 const SPECIALS = [
@@ -41,6 +40,14 @@ const SPECIALS = [
     { name: 'Worchestershire Sauce', price: '$4.20', url: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Worcester_Sauce_001.jpg' }
 ];
 
+
+/* Replace the above code with this if using Vue 3
+*/
+
+/* const vueinst = Vue.createApp({
+}).mount('');
+*/
+
 const vueinst = new Vue({
     el: '#app',
     data: {
@@ -48,16 +55,7 @@ const vueinst = new Vue({
     }
 });
 
-
-/* Replace the above code with this if using Vue 3
-
-const vueinst = Vue.createApp({
-
-}).mount('');
-
-*/
-
-/* task1-1 */
+/* Task 1-1 */
 vueinst.$watch('choose', function (newValue, oldValue) {
     document.querySelector('#sp').textContent = newValue;
 });
