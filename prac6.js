@@ -63,6 +63,6 @@ vueinst.$watch('choose', function (newValue, oldValue) {
 
 /* Task 1-2 */
 // Switch
-special.$watch('special', function (newValue, oldValue) {
+vueinst.$watch('special', function (newValue, oldValue) {
     document.querySelector('#ad').textContent = newValue;
 });
