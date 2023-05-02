@@ -48,7 +48,6 @@ const SPECIALS = [
 }).mount('');
 */
 
-/* Task 1-1 */
 const vueinst = new Vue({
     el: '#app',
     data: {
@@ -57,6 +56,7 @@ const vueinst = new Vue({
     }
 });
 
+/* Task 1-1 */
 vueinst.$watch('choose', function (newValue) {
     document.querySelector('#sp').textContent = newValue;
 });
