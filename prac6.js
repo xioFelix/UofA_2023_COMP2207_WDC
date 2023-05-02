@@ -62,7 +62,7 @@ vueinst.$watch('choose', function (newValue, oldValue) {
 
 /* Task 1-2 */
 const special = new Vue({
-    el: '#app',
+    el: 'pad',
     data: {
         special: SPECIALS[0]
     }
