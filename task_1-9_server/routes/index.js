@@ -53,6 +53,33 @@ var items = [{
 },
 ];
 
+router.get('/search', function (req, res, next) {
+
+  // Check if URL parameter present
+  if ('q' in req.query) {
+
+    // If so, search the titles and descriptions of items for a match
+    var results = [];
+    var q = req.query.q.toLowerCase();
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].name.toLowerCase().includes(q)
+        || items[i].description.toLowerCase().includes(q)) {
+        results.push(items[i]);
+      }
+    }
+
+    // Send matching items
+    res.json(results);
+
+  } else {
+
+    // Otherwise send all items
+    res.json(items);
+
+  }
+
+});
+
 router.get('/items', function(req, res, next) {
 
     // Check if URL parameter present
