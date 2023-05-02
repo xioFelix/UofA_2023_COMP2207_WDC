@@ -68,9 +68,7 @@ const special = new Vue({
     }
 });
 
-// 切换特价项目
-function changeSpecial() {
-    var currentIndex = SPECIALS.indexOf(app.special);
-    var nextIndex = (currentIndex + 1) % SPECIALS.length;
-    app.special = SPECIALS[nextIndex];
-}
+// Switch
+vueinst.$watch('special', function (newValue, oldValue) {
+    document.querySelector('#sp').textContent = newValue;
+});
