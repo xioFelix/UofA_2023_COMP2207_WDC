@@ -61,3 +61,7 @@ const vueinst = new Vue({
 vueinst.$watch('choose', function (newValue) {
     document.querySelector('#sp').textContent = newValue;
 });
+
+vueinst.$watch('choose', function (newValue) {
+    document.querySelector('#sp').textContent = newValue;
+});
