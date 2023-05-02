@@ -52,7 +52,8 @@ const vueinst = new Vue({
     el: '#app',
     data: {
         choose: 'Choose ...',
-        special: SPECIALS[0]
+        special: SPECIALS[0],
+        show_ad: 'true'
     }
 });
 
