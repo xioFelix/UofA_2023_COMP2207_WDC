@@ -43,7 +43,7 @@
             <div class="pad" id="ad">
                 <button type="button" class="pure-button" style="float:right;"
                     onclick="vueinst.show_ad = false;">close</button>
-                <img src="special.url" alt="special" onclick="vueinst.special=SPECIALS[Math.floor((Math.random() * 3))];" />
+                <img src="special.url" alt="special.name" onclick="vueinst.special=SPECIALS[Math.floor((Math.random() * 3))];" />
                 <h3>Some Name: {{special.name}}</h3>
                 <p>$Some.Price: {{special.price}}</p>
             </div>
