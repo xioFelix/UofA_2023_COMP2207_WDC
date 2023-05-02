@@ -31,7 +31,7 @@
                 <nav class="pure-menu pure-menu-horizontal">
                     <ul id="topmenu" class="pure-menu-list">
                     <li v-for="item in top_menu" class="pure-menu-item">
-                        <a href="item.url" class="pure-menu-link">{{item.title}}</a>
+                        <a :href="item.url" class="pure-menu-link">{{item.title}}</a>
                     </li>
                     </ul>
                     <div class="pure-menu">
@@ -61,8 +61,9 @@
                     </div>
 
                     <div id="comments">
-                        <textarea rows="4" cols="60" class="pure-u-1">Comments</textarea><button type="button"
-                            class="pure-button pure-u-1-4">Add comment</button>
+                        <textarea v-model="c_text" rows="4" cols="60" class="pure-u-1">Comments</textarea>
+                        <button type="button" class="pure-button pure-u-1-4" @click="addComment">Add comment</button>
+                        <p v-for="comment in c_arr">{{ comment }}</p>
                     </div>
                 </div>
 

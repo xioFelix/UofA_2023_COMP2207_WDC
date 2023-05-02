@@ -51,7 +51,17 @@ const vueinst = new Vue({
             { title: 'Home', url: '/' },
             { title: 'About', url: '/about' },
             { title: 'Contact Us', url: '/contact' }
-        ]
+        ],
+        c_text: 'type your comment here',
+        c_arr: []
+    },
+    methods: {
+        addComment() {
+            if (this.c_text !== '') {
+                this.c_arr.push(this.c_text);
+                this.c_text = 'type your comment here';
+            }
+        }
     }
 });
 
