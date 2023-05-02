@@ -60,11 +60,3 @@ const vueinst = new Vue({
 vueinst.$watch('choose', function (newValue) {
     document.querySelector('#sp').textContent = newValue;
 });
-
-/* Task 1-2 */
-// Switch
-function changeSpecial() {
-    let currentIndex = SPECIALS.indexOf(app.special);
-    let nextIndex = (currentIndex + 1) % SPECIALS.length;
-    app.special = SPECIALS[nextIndex];
-}
