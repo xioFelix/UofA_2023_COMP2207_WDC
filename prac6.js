@@ -55,6 +55,7 @@ const vueinst = new Vue({
     }
 });
 
+/* Task 1-1 */
 vueinst.$watch('choose', function (newValue, oldValue) {
     document.querySelector('#sp').textContent = newValue;
 });
