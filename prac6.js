@@ -1,12 +1,4 @@
 /*
-
-Top menu (task 1.5):
-
-{ title:'Home',         url:'/' }
-{ title:'About',        url:'/about' }
-{ title:'Contact Us',   url:'/contact' }
-
-
 Top menu 2 (task 1.7):
 
 { title:'Home', url:'/', submenus: [] }
@@ -54,7 +46,12 @@ const vueinst = new Vue({
         choose: 'Choose ...',
         special: SPECIALS[0],
         show_ad: true,
-        dark_mode: false
+        dark_mode: false,
+        top_menu: [
+            { title: 'Home', url: '/' },
+            { title: 'About', url: '/about' },
+            { title: 'Contact Us', url: '/contact' }
+        ]
     }
 });
 

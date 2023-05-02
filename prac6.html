@@ -23,13 +23,16 @@
     </head>
 
     <body>
+
         <div id="app" :class="{dark_mode}">
 
             <header>
                 <h1>Wendy's Delicious Condiments (and Fruit)</h1>
                 <nav class="pure-menu pure-menu-horizontal">
                     <ul id="topmenu" class="pure-menu-list">
-
+                    <li v-for="item in top_menu" class="pure-menu-item">
+                        <a href="item.url" class="pure-menu-link">{{item.title}}</a>
+                    </li>
                     </ul>
                     <div class="pure-menu">
                         <ul id="submenu" class="pure-menu-list">
