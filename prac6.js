@@ -57,12 +57,12 @@ const vueinst = new Vue({
     }
 });
 
-vueinst.$watch('choose', function (newValue, oldValue) {
+vueinst.$watch('choose', function (newValue) {
     document.querySelector('#sp').textContent = newValue;
 });
 
 /* Task 1-2 */
 // Switch
-vueinst.$watch('special', function (newValue, oldValue) {
+vueinst.$watch('special', function (newValue) {
     document.querySelector('#ad').textContent = newValue;
 });
