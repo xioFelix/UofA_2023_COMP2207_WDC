@@ -64,10 +64,13 @@ vueinst.$watch('choose', function (newValue, oldValue) {
 const special = new Vue({
     el: '#app',
     data: {
-        choose: 'Choose ...'
+        special: SPECIALS[0]
     }
 });
 
-vueinst.$watch('choose', function (newValue, oldValue) {
-    document.querySelector('#sp').textContent = newValue;
-});
+// 切换特价项目
+function changeSpecial() {
+    var currentIndex = SPECIALS.indexOf(app.special);
+    var nextIndex = (currentIndex + 1) % SPECIALS.length;
+    app.special = SPECIALS[nextIndex];
+}
