@@ -1,0 +1,13 @@
+{
+  "name": "task-1-9-server",
+  "version": "2023.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "debug": "~2.6.9",
+    "express": "~4.18.2",
+    "morgan": "~1.9.1"
+  }
+}
