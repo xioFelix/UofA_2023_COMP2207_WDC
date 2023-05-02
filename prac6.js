@@ -69,6 +69,6 @@ const special = new Vue({
 });
 
 // Switch
-vueinst.$watch('special', function (newValue, oldValue) {
+special.$watch('special', function (newValue, oldValue) {
     document.querySelector('#sp').textContent = newValue;
 });
