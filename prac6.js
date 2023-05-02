@@ -62,7 +62,7 @@ vueinst.$watch('choose', function (newValue, oldValue) {
 
 /* Task 1-2 */
 const special = new Vue({
-    el: 'pad',
+    el: '#ad',
     data: {
         special: SPECIALS[0]
     }
@@ -70,5 +70,5 @@ const special = new Vue({
 
 // Switch
 special.$watch('special', function (newValue, oldValue) {
-    document.querySelector('#sp').textContent = newValue;
+    document.querySelector('#ad').textContent = newValue;
 });
