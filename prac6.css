@@ -9,7 +9,10 @@ body, #app {
     margin: 0;
 }
 
-.pure-button-primary
+#app.dark_mode{
+    background-color: #333533;
+    color:#F5CB5C;
+}
 
 nav .pure-menu-link {
     color: #CFDBD5;

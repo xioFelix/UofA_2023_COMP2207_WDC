@@ -23,8 +23,7 @@
     </head>
 
     <body>
-
-        <div id="app">
+        <div id="app" :class="{dark_mode}">
 
             <header>
                 <h1>Wendy's Delicious Condiments (and Fruit)</h1>
@@ -77,10 +76,14 @@
 
                     <h3>Dark Mode:</h3>
                     <div class="pure-button-group" role="group" aria-label="Nightmode">
-                        <button type="button" class="pure-button pure-button-active"
+                        <button type="button" class="pure-button"
+                            v-bind:class="{'pure-button-active': !dark_mode}"
                             onclick="vueinst.dark_mode = false;">OFF</button>
-                        <button type="button" class="pure-button" onclick="vueinst.dark_mode = true;">ON</button>
+                        <button type="button" class="pure-button"
+                            v-bind:class="{ 'pure-button-active': dark_mode, 'pure-button-primary': dark_mode }"
+                            onclick="vueinst.dark_mode = true;">ON</button>
                     </div>
+
 
                     <hr />
 
