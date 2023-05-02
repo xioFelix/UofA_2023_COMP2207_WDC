@@ -53,7 +53,7 @@ const vueinst = new Vue({
     data: {
         choose: 'Choose ...',
         special: SPECIALS[0],
-        show_ad: 'true'
+        show_ad: true
     }
 });
 
@@ -61,11 +61,3 @@ const vueinst = new Vue({
 vueinst.$watch('choose', function (newValue) {
     document.querySelector('#sp').textContent = newValue;
 });
-
-vueinst.$watch('choose', function (newValue) {
-    document.querySelector('#sp').textContent = newValue;
-});
-
-// vueinst.$watch('show_ad', function (newValue) {
-//     document.querySelector('#ad').textContent = newValue;
-// });
