@@ -37,7 +37,7 @@ let previousMessage = '';
 app.post('/pass-it-on', (req, res) => {
     const { message } = req.body;
 
-    if (!message || message.trim() === '') {
+    if (!message) {
         res.status(400).send('Bad Request');
     } else {
         previousMessage = message;
