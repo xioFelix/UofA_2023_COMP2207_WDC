@@ -37,11 +37,12 @@ let preMessage = '';
 app.post('/pass-it-on', (req, res) => {
     const { message } = req.body;
 
-    if (!message) {
+    if (!message || message.trim() === '') {
         res.status(400).send('Bad Request');
     } else {
+        const responseMessage = previousMessage || 'No previous message available.';
         preMessage = message;
-        res.send(preMessage);
+        res.send(responseMessage);
     }
 });
 
