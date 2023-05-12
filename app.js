@@ -32,7 +32,7 @@ app.get('/brew', (req, res) => {
 });
 
 /* 1.2 */
-let postMessage = '';
+let preMessage = '';
 
 app.post('/pass-it-on', (req, res) => {
     const { message } = req.body;
@@ -40,8 +40,8 @@ app.post('/pass-it-on', (req, res) => {
     if (!message) {
         res.status(400).send('Bad Request');
     } else {
-        postMessage = message;
-        res.send(postMessage);
+        preMessage = message;
+        res.send(preMessage);
     }
 });
 
