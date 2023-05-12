@@ -10,7 +10,7 @@ var app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -31,7 +31,17 @@ app.get('/brew', (req, res) => {
     }
 });
 
-/*   */
+/* 1.2 */
+app.post('/pass-it-on', (req, res) => {
+    const { message } = req.body;
+
+    if (!message || message.trim() === '') {
+        res.status(400).send('Bad Request');
+    } else {
+        previousMessage = message;
+        res.send(previousMessage);
+    }
+});
 
 
 app.listen(3000, () => {
