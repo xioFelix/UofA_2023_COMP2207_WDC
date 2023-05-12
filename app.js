@@ -32,7 +32,7 @@ app.get('/brew', (req, res) => {
 });
 
 /* 1.2 */
-let preMessage = '';
+let preMessage = 'First';
 
 app.post('/pass-it-on', (req, res) => {
     const { message } = req.body;
