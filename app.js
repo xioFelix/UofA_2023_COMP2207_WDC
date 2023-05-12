@@ -45,7 +45,7 @@ app.post('/pass-it-on', (req, res) => {
     }
 });
 
-/*  */
+/* npm status  */
 app.listen(3000, () => {
     console.log('Server listening on port 3000');
 });
