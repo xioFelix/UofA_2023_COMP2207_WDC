@@ -59,12 +59,9 @@ var requestCount = 0;
 const requestCounter = (req, res, next) => {
     requestCount++;
     console.log(`Received ${requestCount} requests`);
-
-    // Proceed to the next middleware function or route handler
     next();
 };
 
-// Use the middleware function for all routes and all methods
 app.use(requestCounter);
 
 /* npm status show */
