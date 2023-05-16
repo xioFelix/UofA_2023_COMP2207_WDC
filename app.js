@@ -55,7 +55,19 @@ app.post('/combine', (req, res) => {
 });
 
 /* 1.4 */
+app.post("/users/addpost", (req, res) => {
+    const { title, content } = req.body;
 
+    const post = {
+        title,
+        content,
+        createdAt: new Date(),
+    };
+
+    posts.push(post);
+
+    res.sendStatus(200);
+});
 
 /* npm status show */
 app.listen(3000, () => {
