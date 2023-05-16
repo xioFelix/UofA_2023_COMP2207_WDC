@@ -55,13 +55,19 @@ app.post('/combine', (req, res) => {
 });
 
 /* 2.1 */
-const countRequests = (req, res, next) => {
-    const requests = (req.app.get("requests") || 0) + 1;
-    req.app.set("requests", requests);
-    console.log(`Received ${requests} requests`);
+const requestCounter = (req, res, next) => {
+    // Increment the request count
+    requestCount++;
+
+    // Log the current count to the server's console
+    console.log(`Received ${requestCount} requests`);
+
+    // Proceed to the next middleware function or route handler
     next();
 };
-app.use(countRequests);
+
+// Use the middleware function for all routes and all methods
+app.use(requestCounter);
 
 /* npm status show */
 app.listen(3000, () => {
