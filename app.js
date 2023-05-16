@@ -69,7 +69,6 @@ app.get('/cookie', (req, res) => {
     } else {
         res.cookie('task3_1', 1);
     }
-    res.send('Cookie task3_1 updated');
 });
 
 /* npm status show */
