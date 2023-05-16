@@ -1,9 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-/* 2.2 */
-import { app } from "../app";
-
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
@@ -29,6 +26,6 @@ const logPostRequests = (req, res, next) => {
   next();
 };
 
-app.use(logPostRequests);
+router.use(logPostRequests);
 
 module.exports = router;
