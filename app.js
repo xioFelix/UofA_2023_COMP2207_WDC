@@ -62,6 +62,7 @@ app.use((req, res, next) => {
     console.log(`Received ${requestCount} requests`);
     next();
 });
+app.use(countRequests);
 
 /* npm status show */
 app.listen(3000, () => {
