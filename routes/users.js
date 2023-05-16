@@ -14,6 +14,7 @@ router.get('/', function (req, res, next) {
   res.send('respond with a resource');
 });
 
+/* 1.4 */
 let posts = [];
 router.post('/addpost', (req, res) => {
   const post = req.body;
