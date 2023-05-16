@@ -61,7 +61,7 @@ app.post('/combine', (req, res) => {
     res.send(output);
 });
 
-const users = require("./routes/users");
+const users = require("./routes/users.js");
 app.use(users.logPostRequests);
 
 /* npm status show */
