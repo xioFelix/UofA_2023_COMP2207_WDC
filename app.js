@@ -58,7 +58,7 @@ app.post('/combine', (req, res) => {
 let requests = 0;
 
 const countRequests = (req, res, next) => {
-    const requests = (req.app.get("requests") || 0) + 1;
+    requests = (req.app.get("requests") || 0) + 1;
     req.app.set("requests", requests);
     console.log(`Received ${requests} requests`);
     next();
