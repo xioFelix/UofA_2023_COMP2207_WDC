@@ -69,6 +69,10 @@ app.post("/users/addpost", (req, res) => {
     res.sendStatus(200);
 });
 
+app.get("/users/getposts", (req, res) => {
+    res.send(posts);
+});
+
 /* npm status show */
 app.listen(3000, () => {
     console.log('Server listening on port 3000');
