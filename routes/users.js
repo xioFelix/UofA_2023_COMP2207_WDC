@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* 2.2 */
-import app from "../app.js";
+import { app } from "../app";
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
