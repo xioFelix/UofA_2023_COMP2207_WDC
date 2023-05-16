@@ -17,6 +17,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+/* 2.1 */
+var requestCount = 0;
+app.use((req, res, next) => {
+    requestCount++;
+    console.log(`Received ${requestCount} requests`);
+    next();
+});
 
 /* 1.1 */
 app.get('/brew', (req, res) => {
