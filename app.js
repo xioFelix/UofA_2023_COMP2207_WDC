@@ -56,13 +56,11 @@ app.post('/combine', (req, res) => {
 
 /* 2.1 */
 var requestCount = 0;
-app.use = (req, res, next) => {
+app.use((req, res, next) => {
     requestCount++;
     console.log(`Received ${requestCount} requests`);
     next();
-};
-
-app.use(requestCounter);
+});
 
 /* npm status show */
 app.listen(3000, () => {
