@@ -9,10 +9,8 @@ const logPostRequests = (req, res, next) => {
   next();
 };
 
-// Apply the middleware to the /users router
 router.use(logPostRequests);
 
-/* GET users listing. */
 router.get('/', function (req, res, next) {
   res.send('respond with a resource');
 });
