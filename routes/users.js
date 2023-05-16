@@ -28,5 +28,8 @@ router.get('/getposts', (req, res) => {
 });
 
 /* 3.1 */
+var cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
 
 module.exports = router;
