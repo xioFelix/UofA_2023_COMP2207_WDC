@@ -25,7 +25,6 @@ const logPostRequests = (req, res, next) => {
   }
   next();
 };
-app.use(logPostRequests);
 
 
 module.exports = router;
