@@ -46,6 +46,17 @@ app.post('/pass-it-on', (req, res) => {
     }
 });
 
+/* 1.3 */
+app.post('/combine', (req, res) => {
+    const firstInput = req.body.firstInput;
+    const secondTextArea = req.body.secondTextArea;
+
+    const output = firstInput + "\n" + secondTextArea;
+
+    res.send(output);
+});
+
+
 /* npm status show */
 app.listen(3000, () => {
     console.log('Server listening on port 3000');
