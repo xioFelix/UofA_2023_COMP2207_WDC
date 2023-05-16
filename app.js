@@ -53,8 +53,6 @@ app.post('/combine', (req, res) => {
 
     res.send(output);
 });
-app.use(express.json());
-
 
 /* npm status show */
 app.listen(3000, () => {
