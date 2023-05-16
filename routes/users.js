@@ -27,6 +27,6 @@ router.get('/getposts', (req, res) => {
   res.json(posts);
 });
 
-/*  */
+/* 3.1 */
 
 module.exports = router;
