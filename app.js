@@ -55,15 +55,12 @@ app.post('/combine', (req, res) => {
 });
 
 /* 2.1 */
-let requests = 0;
-
 const countRequests = (req, res, next) => {
-    requests = (req.app.get("requests") || 0) + 1;
+    const requests = (req.app.get("requests") || 0) + 1;
     req.app.set("requests", requests);
     console.log(`Received ${requests} requests`);
     next();
 };
-
 app.use(countRequests);
 
 /* npm status show */
