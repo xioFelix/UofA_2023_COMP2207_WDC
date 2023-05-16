@@ -68,6 +68,7 @@ const logPostRequests = (req, res, next) => {
     }
     next();
 };
+app.use(logPostRequests);
 
 
 /* npm status show */
