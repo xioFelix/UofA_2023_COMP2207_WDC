@@ -64,7 +64,7 @@ app.post("/users/addpost", (req, res) => {
         createdAt: new Date(),
     };
 
-    posts.push(post);
+    post.push(post);
 
     res.sendStatus(200);
 });
