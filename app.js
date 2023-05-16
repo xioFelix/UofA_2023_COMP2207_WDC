@@ -22,6 +22,9 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+
 /* 1.1 */
 app.get('/brew', (req, res) => {
     const { drink } = req.query;
