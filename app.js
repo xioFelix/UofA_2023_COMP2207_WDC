@@ -63,7 +63,7 @@ app.post("/users/addpost", (req, res) => {
     const post = {
         title,
         content,
-        createdAt: new Date(),
+        createdAt: new Date()
     };
 
     post.push(post);
