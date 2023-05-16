@@ -73,6 +73,13 @@ app.get("/users/getposts", (req, res) => {
     res.send(posts);
 });
 
+app.post("/users/addpost", post);
+
+// Get all blog posts.
+app.get("/users/getposts", (req, res) => {
+    res.send(posts);
+});
+
 /* npm status show */
 app.listen(3000, () => {
     console.log('Server listening on port 3000');
