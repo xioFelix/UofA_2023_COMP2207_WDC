@@ -55,7 +55,7 @@ app.post('/combine', (req, res) => {
 });
 
 /* 2.1 */
-let requestCount = 0;
+let requests = 0;
 
 const countRequests = (req, res, next) => {
     const requests = (req.app.get("requests") || 0) + 1;
