@@ -42,7 +42,7 @@
 
 <script>
     document.getElementById('makePost').addEventListener('click', () => {
-        const post = { title: 'My Post', content: 'This is my post' }; // 替换为实际的博客文章数据
+        const post = { title: 'My Post', content: 'This is my post' };
         fetch('http://localhost:3000/users/addpost', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -55,7 +55,7 @@
             .then(response => response.json())
             .then(data => {
                 const postsDiv = document.getElementById('posts');
-                postsDiv.innerHTML = ''; // 清空之前的博客文章
+                postsDiv.innerHTML = '';
                 data.forEach(post => {
                     const postDiv = `
                             <div>
