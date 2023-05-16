@@ -18,5 +18,14 @@ router.get('/getposts', (req, res) => {
   res.json(posts);
 });
 
+/* 2.2 */
+const logPostRequests = (req, res, next) => {
+  if (req.method === "POST" && req.path.startsWith("/users")) {
+    console.log("POST from a user");
+  }
+  next();
+};
+app.use(logPostRequests);
+
 
 module.exports = router;
