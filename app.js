@@ -61,7 +61,19 @@ app.post('/combine', (req, res) => {
     res.send(output);
 });
 
-/*  */
+/* 3.1 */
+app.get('/cookie', (req, res) => {
+    // Check if the cookie exists
+    if (req.cookies.task3_1) {
+        // If it does, increment its value by 1
+        let newValue = Number(req.cookies.task3_1) + 1;
+        res.cookie('task3_1', newValue);
+    } else {
+        // If it doesn't, set it to 1
+        res.cookie('task3_1', 1);
+    }
+    res.send('Cookie task3_1 updated');
+});
 
 /* npm status show */
 app.listen(3000, () => {
