@@ -55,6 +55,7 @@ app.post('/combine', (req, res) => {
 });
 
 /* 2.1 */
+var requestCount = 0;
 const requestCounter = (req, res, next) => {
     // Increment the request count
     requestCount++;
