@@ -61,7 +61,7 @@ app.post('/combine', (req, res) => {
     res.send(output);
 });
 
-
+/* 2
 
 /* npm status show */
 app.listen(3000, () => {
