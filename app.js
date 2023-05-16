@@ -48,8 +48,8 @@ app.post('/pass-it-on', (req, res) => {
 
 /* 1.3 */
 app.post('/combine', (req, res) => {
-    const {firstInput} = req.body;
-    const {secondTextArea } = req.body;
+    const { firstInput } = req.body;
+    const { secondTextArea } = req.body;
 
     const output = firstInput + "\n" + secondTextArea;
 
