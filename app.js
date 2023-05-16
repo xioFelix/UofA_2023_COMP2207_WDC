@@ -61,7 +61,14 @@ app.post('/combine', (req, res) => {
     res.send(output);
 });
 
-/* 2
+/* 2.2 */
+const logPostRequests = (req, res, next) => {
+    if (req.method === "POST" && req.path.startsWith("/users")) {
+        console.log("POST from a user");
+    }
+    next();
+};
+
 
 /* npm status show */
 app.listen(3000, () => {
