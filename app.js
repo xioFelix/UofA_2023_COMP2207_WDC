@@ -49,10 +49,11 @@ app.post('/pass-it-on', (req, res) => {
 /* 1.3 */
 app.post('/combine', (req, res) => {
     const { lines, suffix } = req.body;
-    const output = lines.join('\n') + '\n' + suffix;
-
+    const updatedLines = lines.map((line) => line + suffix);
+    const output = updatedLines.join('\n');
     res.send(output);
 });
+
 
 /* npm status show */
 app.listen(3000, () => {
