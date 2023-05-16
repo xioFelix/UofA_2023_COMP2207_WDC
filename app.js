@@ -54,10 +54,6 @@ app.post('/combine', (req, res) => {
     res.send(output);
 });
 
-/* 1.4 */
-app.listen(3000, () => console.log('Server running on port 3000'));
-
-
 /* npm status show */
 app.listen(3000, () => {
     console.log('Server listening on port 3000');
