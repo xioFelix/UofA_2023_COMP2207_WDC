@@ -55,12 +55,12 @@ app.post('/combine', (req, res) => {
 });
 
 /* 1.4 */
-let requestCount = 0; // 用于存储请求总数的计数器
+let requestCount = 0;
 
 app.use((req, res, next) => {
-    requestCount++; // 增加计数器
-    console.log(`Received ${requestCount} requests`); // 将当前计数记录到控制台
-    next(); // 调用下一个中间件函数
+    requestCount++;
+    console.log(`Received ${requestCount} requests`);
+    next();
 });
 
 /* npm status show */
