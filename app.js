@@ -55,6 +55,8 @@ app.post('/combine', (req, res) => {
 });
 
 /* 1.4 */
+const posts = [];
+
 app.post("/users/addpost", (req, res) => {
     const { title, content } = req.body;
 
