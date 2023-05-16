@@ -56,7 +56,7 @@ app.post('/combine', (req, res) => {
 
 /* 2.1 */
 var requestCount = 0;
-const requestCounter = (req, res, next) => {
+app.use = (req, res, next) => {
     requestCount++;
     console.log(`Received ${requestCount} requests`);
     next();
