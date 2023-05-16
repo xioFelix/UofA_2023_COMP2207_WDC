@@ -75,7 +75,7 @@ app.get("/users/getposts", (req, res) => {
     res.send(posts);
 });
 
-app.post("/users/addpost", post);
+app.post("/users/addpost", posts);
 
 // Get all blog posts.
 app.get("/users/getposts", (req, res) => {
