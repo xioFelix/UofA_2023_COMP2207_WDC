@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    fetch('/actors')
+    fetch('/')
         .then(response => response.json())
         .then(data => {
             const tableBody = document.querySelector('table tbody');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             lastName: lastNameInput.value
         };
 
-        fetch('/actors', {
+        fetch('/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
