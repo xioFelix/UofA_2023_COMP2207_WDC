@@ -1,5 +1,6 @@
 SELECT address
 FROM address
+JOIN store ON store.address_id = store.store_id
 JOIN inventory ON address.address_id = inventory.address_id
 JOIN film ON inventory.film_id = film.film_id
 WHERE film.title = 'TWISTED PIRATES'
