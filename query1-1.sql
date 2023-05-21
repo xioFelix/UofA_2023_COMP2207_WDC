@@ -1,2 +1,3 @@
 USE sakila;
-SELECT COUNT(*) FROM film;
+SELECT COUNT(*)
+FROM film;
