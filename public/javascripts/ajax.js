@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const addActorForm = document.querySelector('form');
+
     addActorForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
