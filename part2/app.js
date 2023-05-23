@@ -14,7 +14,7 @@ app.use(cookieParser());
 app.use(express.static(__dirname + "/public", { index: "actors.html" }));
 
 
-var mysql = require('mysql');
+var mysql = require('mysql2');
 
 // create a 'pool' (group) of connections to be used for connecting with our SQL server
 var dbConnectionPool = mysql.createPool({
@@ -26,7 +26,7 @@ var dbConnectionPool = mysql.createPool({
 // Connect to the database
 app.use(function (req, res, next) {
     req.pool = dbConnectionPool;
-    console.log("Successful connected to the database")
+    console.log("Successful connected to the database");
     next();
 });
 
