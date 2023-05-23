@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             data.forEach(actor => {
                 const row = document.createElement('tr');
-                row.innerHTML = `<td>${actor.firstName}</td><td>${actor.lastName}</td>`;
+                row.innerHTML = `<td>${actor.first_name}</td><td>${actor.last_name}</td>`;
                 tableBody.appendChild(row);
             });
         });
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const lastNameInput = document.querySelector('#actor-last-name');
 
         const actor = {
-            firstName: firstNameInput.value,
-            lastName: lastNameInput.value
+            first_name: firstNameInput.value,
+            last_name: lastNameInput.value
         };
 
         fetch('/actors', {

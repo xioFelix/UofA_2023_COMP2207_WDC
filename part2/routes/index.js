@@ -29,8 +29,8 @@ router.get('/actors', function (req, res, next) {
 router.post('/actors', function (req, res, next) {
 
   const actor = {
-    firstName: req.body.firstName,
-    lastName: req.body.lastName
+    first_name: req.body.first_name,
+    last_name: req.body.last_name
   };
 
   req.pool.getConnection(function (err, connection) {
@@ -39,8 +39,8 @@ router.post('/actors', function (req, res, next) {
       return;
     }
 
-    var query = "INSERT INTO actor (firstName, lastName) VALUES (?, ?)";
-    connection.query(query, [actor.firstName, actor.lastName], function (err, result) {
+    var query = "INSERT INTO actor (first_name, last_name) VALUES (?, ?)";
+    connection.query(query, [actor.first_name, actor.last_name], function (err, result) {
       connection.release();
       if (err) {
         res.sendStatus(500);
