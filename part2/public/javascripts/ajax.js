@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+
+    function fetchActors() {
     fetch('/actors')
         .then(response => response.json())
         .then(data => {
@@ -12,8 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 tableBody.appendChild(row);
             });
         });
+    }
 
-
+    fetchActors();
+    
     const addActorForm = document.querySelector('form');
 
     addActorForm.addEventListener('submit', (addActorForm) => {
@@ -42,5 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         firstNameInput.value = '';
         lastNameInput.value = '';
+        fetchActors();
     });
 });
