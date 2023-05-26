@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const addActorForm = document.querySelector('form');
 
-    addActorForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+    addActorForm.addEventListener('submit', (addActorForm) => {
+        addActorForm.preventDefault();
 
         const firstNameInput = document.querySelector('#actor-first-name');
         const lastNameInput = document.querySelector('#actor-last-name');
